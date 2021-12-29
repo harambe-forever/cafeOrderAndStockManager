@@ -1,0 +1,377 @@
+﻿namespace WindowsProg
+{
+    partial class Siparis
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.userDataDataSet = new WindowsProg.UserDataDataSet();
+            this.foodGrid = new System.Windows.Forms.DataGridView();
+            this.drinkGrid = new System.Windows.Forms.DataGridView();
+            this.dessertGrid = new System.Windows.Forms.DataGridView();
+            this.foodGroupBox = new System.Windows.Forms.GroupBox();
+            this.Quantity = new System.Windows.Forms.NumericUpDown();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.foodNameTextBox = new System.Windows.Forms.TextBox();
+            this.drinkGroupBox = new System.Windows.Forms.GroupBox();
+            this.drinkQuantity = new System.Windows.Forms.NumericUpDown();
+            this.drinkPriceTextBox = new System.Windows.Forms.TextBox();
+            this.drinkNameTextBox = new System.Windows.Forms.TextBox();
+            this.dessertGroupBox = new System.Windows.Forms.GroupBox();
+            this.dessertQuantity = new System.Windows.Forms.NumericUpDown();
+            this.dessertPriceTextBox = new System.Windows.Forms.TextBox();
+            this.dessertNameTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).BeginInit();
+            this.foodGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantity)).BeginInit();
+            this.drinkGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drinkQuantity)).BeginInit();
+            this.dessertGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dessertQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // userDataDataSet
+            // 
+            this.userDataDataSet.DataSetName = "UserDataDataSet";
+            this.userDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // foodGrid
+            // 
+            this.foodGrid.AutoGenerateColumns = false;
+            this.foodGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.foodGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.foodGrid.DataSource = this.productBindingSource;
+            this.foodGrid.Location = new System.Drawing.Point(12, 12);
+            this.foodGrid.Name = "foodGrid";
+            this.foodGrid.Size = new System.Drawing.Size(320, 170);
+            this.foodGrid.TabIndex = 0;
+            this.foodGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGrid_CellClick);
+            // 
+            // drinkGrid
+            // 
+            this.drinkGrid.AutoGenerateColumns = false;
+            this.drinkGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.drinkGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.drinkGrid.DataSource = this.productBindingSource;
+            this.drinkGrid.Location = new System.Drawing.Point(338, 12);
+            this.drinkGrid.Name = "drinkGrid";
+            this.drinkGrid.Size = new System.Drawing.Size(320, 170);
+            this.drinkGrid.TabIndex = 1;
+            this.drinkGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drinkGrid_CellClick);
+            // 
+            // dessertGrid
+            // 
+            this.dessertGrid.AutoGenerateColumns = false;
+            this.dessertGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dessertGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.dessertGrid.DataSource = this.productBindingSource;
+            this.dessertGrid.Location = new System.Drawing.Point(664, 12);
+            this.dessertGrid.Name = "dessertGrid";
+            this.dessertGrid.Size = new System.Drawing.Size(320, 170);
+            this.dessertGrid.TabIndex = 2;
+            this.dessertGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dessertGrid_CellClick);
+            // 
+            // foodGroupBox
+            // 
+            this.foodGroupBox.Controls.Add(this.Quantity);
+            this.foodGroupBox.Controls.Add(this.priceTextBox);
+            this.foodGroupBox.Controls.Add(this.foodNameTextBox);
+            this.foodGroupBox.Location = new System.Drawing.Point(13, 189);
+            this.foodGroupBox.Name = "foodGroupBox";
+            this.foodGroupBox.Size = new System.Drawing.Size(319, 182);
+            this.foodGroupBox.TabIndex = 3;
+            this.foodGroupBox.TabStop = false;
+            this.foodGroupBox.Text = "Food";
+            // 
+            // Quantity
+            // 
+            this.Quantity.Location = new System.Drawing.Point(218, 19);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(94, 20);
+            this.Quantity.TabIndex = 2;
+            this.Quantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Quantity.ValueChanged += new System.EventHandler(this.Quantity_ValueChanged);
+            // 
+            // priceTextBox
+            // 
+            this.priceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.priceTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.priceTextBox.Location = new System.Drawing.Point(112, 19);
+            this.priceTextBox.Multiline = true;
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(100, 157);
+            this.priceTextBox.TabIndex = 1;
+            // 
+            // foodNameTextBox
+            // 
+            this.foodNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.foodNameTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.foodNameTextBox.Location = new System.Drawing.Point(6, 19);
+            this.foodNameTextBox.Multiline = true;
+            this.foodNameTextBox.Name = "foodNameTextBox";
+            this.foodNameTextBox.Size = new System.Drawing.Size(100, 157);
+            this.foodNameTextBox.TabIndex = 0;
+            // 
+            // drinkGroupBox
+            // 
+            this.drinkGroupBox.Controls.Add(this.drinkQuantity);
+            this.drinkGroupBox.Controls.Add(this.drinkPriceTextBox);
+            this.drinkGroupBox.Controls.Add(this.drinkNameTextBox);
+            this.drinkGroupBox.Location = new System.Drawing.Point(339, 189);
+            this.drinkGroupBox.Name = "drinkGroupBox";
+            this.drinkGroupBox.Size = new System.Drawing.Size(319, 182);
+            this.drinkGroupBox.TabIndex = 4;
+            this.drinkGroupBox.TabStop = false;
+            this.drinkGroupBox.Text = "Drink";
+            // 
+            // drinkQuantity
+            // 
+            this.drinkQuantity.Location = new System.Drawing.Point(218, 19);
+            this.drinkQuantity.Name = "drinkQuantity";
+            this.drinkQuantity.Size = new System.Drawing.Size(94, 20);
+            this.drinkQuantity.TabIndex = 2;
+            this.drinkQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.drinkQuantity.ValueChanged += new System.EventHandler(this.drinkQuantity_ValueChanged);
+            // 
+            // drinkPriceTextBox
+            // 
+            this.drinkPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.drinkPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.drinkPriceTextBox.Location = new System.Drawing.Point(112, 19);
+            this.drinkPriceTextBox.Multiline = true;
+            this.drinkPriceTextBox.Name = "drinkPriceTextBox";
+            this.drinkPriceTextBox.Size = new System.Drawing.Size(100, 157);
+            this.drinkPriceTextBox.TabIndex = 1;
+            // 
+            // drinkNameTextBox
+            // 
+            this.drinkNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.drinkNameTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.drinkNameTextBox.Location = new System.Drawing.Point(6, 19);
+            this.drinkNameTextBox.Multiline = true;
+            this.drinkNameTextBox.Name = "drinkNameTextBox";
+            this.drinkNameTextBox.Size = new System.Drawing.Size(100, 157);
+            this.drinkNameTextBox.TabIndex = 0;
+            // 
+            // dessertGroupBox
+            // 
+            this.dessertGroupBox.Controls.Add(this.dessertQuantity);
+            this.dessertGroupBox.Controls.Add(this.dessertPriceTextBox);
+            this.dessertGroupBox.Controls.Add(this.dessertNameTextBox);
+            this.dessertGroupBox.Location = new System.Drawing.Point(665, 183);
+            this.dessertGroupBox.Name = "dessertGroupBox";
+            this.dessertGroupBox.Size = new System.Drawing.Size(319, 182);
+            this.dessertGroupBox.TabIndex = 5;
+            this.dessertGroupBox.TabStop = false;
+            this.dessertGroupBox.Text = "Dessert";
+            // 
+            // dessertQuantity
+            // 
+            this.dessertQuantity.Location = new System.Drawing.Point(218, 19);
+            this.dessertQuantity.Name = "dessertQuantity";
+            this.dessertQuantity.Size = new System.Drawing.Size(94, 20);
+            this.dessertQuantity.TabIndex = 2;
+            this.dessertQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.dessertQuantity.ValueChanged += new System.EventHandler(this.dessertQuantity_ValueChanged);
+            // 
+            // dessertPriceTextBox
+            // 
+            this.dessertPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.dessertPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dessertPriceTextBox.Location = new System.Drawing.Point(112, 19);
+            this.dessertPriceTextBox.Multiline = true;
+            this.dessertPriceTextBox.Name = "dessertPriceTextBox";
+            this.dessertPriceTextBox.Size = new System.Drawing.Size(100, 157);
+            this.dessertPriceTextBox.TabIndex = 1;
+            // 
+            // dessertNameTextBox
+            // 
+            this.dessertNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.dessertNameTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dessertNameTextBox.Location = new System.Drawing.Point(6, 19);
+            this.dessertNameTextBox.Multiline = true;
+            this.dessertNameTextBox.Name = "dessertNameTextBox";
+            this.dessertNameTextBox.Size = new System.Drawing.Size(100, 157);
+            this.dessertNameTextBox.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn8.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn9.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn5.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn6.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn3.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // Siparis
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1064, 576);
+            this.Controls.Add(this.dessertGroupBox);
+            this.Controls.Add(this.drinkGroupBox);
+            this.Controls.Add(this.foodGroupBox);
+            this.Controls.Add(this.dessertGrid);
+            this.Controls.Add(this.drinkGrid);
+            this.Controls.Add(this.foodGrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Siparis";
+            this.Text = "Siparis";
+            this.Load += new System.EventHandler(this.Siparis_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).EndInit();
+            this.foodGroupBox.ResumeLayout(false);
+            this.foodGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantity)).EndInit();
+            this.drinkGroupBox.ResumeLayout(false);
+            this.drinkGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drinkQuantity)).EndInit();
+            this.dessertGroupBox.ResumeLayout(false);
+            this.dessertGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dessertQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private UserDataDataSet userDataDataSet;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.DataGridView foodGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridView drinkGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView dessertGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.GroupBox foodGroupBox;
+        private System.Windows.Forms.TextBox foodNameTextBox;
+        private System.Windows.Forms.TextBox priceTextBox;
+        private System.Windows.Forms.NumericUpDown Quantity;
+        private System.Windows.Forms.GroupBox drinkGroupBox;
+        private System.Windows.Forms.NumericUpDown drinkQuantity;
+        private System.Windows.Forms.TextBox drinkPriceTextBox;
+        private System.Windows.Forms.TextBox drinkNameTextBox;
+        private System.Windows.Forms.GroupBox dessertGroupBox;
+        private System.Windows.Forms.NumericUpDown dessertQuantity;
+        private System.Windows.Forms.TextBox dessertPriceTextBox;
+        private System.Windows.Forms.TextBox dessertNameTextBox;
+    }
+}
