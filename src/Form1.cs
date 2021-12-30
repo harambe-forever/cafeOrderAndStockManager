@@ -38,7 +38,7 @@ namespace WindowsProg
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (isValidUser(idTextBox.Text, passwordTextBox.Text))
+            /*if (isValidUser(idTextBox.Text, passwordTextBox.Text))
             {
                 mainForm mainF = new mainForm();
                 mainF.Show();
@@ -47,7 +47,10 @@ namespace WindowsProg
             else
             {
                 MessageBox.Show("Check Username or Password");
-            }
+            }*/
+            mainForm mainF = new mainForm();
+            mainF.Show();
+            this.Hide();
         }
 
         private bool isValidUser(string userName, string password)

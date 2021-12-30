@@ -61,27 +61,6 @@ namespace WindowsProg
                 priceTextBox.Text = row.Cells[2].Value.ToString();
             }            
         }
-
-        int prevValue = 0;
-        private void Quantity_ValueChanged(object sender, EventArgs e)
-        {
-            int price = Int16.Parse(priceTextBox.Text);
-            int temp;
-            int row = foodGrid.CurrentCell.RowIndex;
-            DataGridViewRow row2 = foodGrid.Rows[row];
-            temp = Int16.Parse(row2.Cells[2].Value.ToString());
-            if (Quantity.Value > prevValue)
-            {
-                price += temp;
-                priceTextBox.Text = price.ToString();
-            }else if(Quantity.Value < prevValue)
-            {
-                price -= temp;
-                priceTextBox.Text = price.ToString();
-            }
-            prevValue = (int)Quantity.Value;
-        }
-
         private void drinkGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -91,28 +70,6 @@ namespace WindowsProg
                 drinkPriceTextBox.Text = row.Cells[2].Value.ToString();
             }
         }
-
-        int prevVal = 0;
-        private void drinkQuantity_ValueChanged(object sender, EventArgs e)
-        {
-            int price = Int16.Parse(drinkPriceTextBox.Text);
-            int temp;
-            int row = drinkGrid.CurrentCell.RowIndex;
-            DataGridViewRow row2 = drinkGrid.Rows[row];
-            temp = Int16.Parse(row2.Cells[2].Value.ToString());
-            if (drinkQuantity.Value > prevVal)
-            {
-                price += temp;
-                drinkPriceTextBox.Text = price.ToString();
-            }
-            else if (drinkQuantity.Value < prevVal)
-            {
-                price -= temp;
-                drinkPriceTextBox.Text = price.ToString();
-            }
-            prevVal = (int)drinkQuantity.Value;
-        }
-
         private void dessertGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -123,26 +80,57 @@ namespace WindowsProg
             }
         }
 
+        private void qttChg(TextBox textBoxName, DataGridView dataGridName, int qtt, int previousValue)
+        {
+            int price = Int16.Parse(textBoxName.Text);
+            int temp;
+            int row = dataGridName.CurrentCell.RowIndex;
+            DataGridViewRow row2 = dataGridName.Rows[row];
+            temp = Int16.Parse(row2.Cells[2].Value.ToString());
+            if(qtt > previousValue)
+            {
+                price += temp;
+                textBoxName.Text = price.ToString();
+            }else if(qtt < previousValue)
+            {
+                price -= temp;
+                textBoxName.Text = price.ToString();
+            }
+            previousValue = qtt;
+            
+            switch (dataGridName.Name.ToString())
+            {
+                case "foodGrid":
+                    prevValue = previousValue;
+                    break;
+                case "drinkGrid":
+                    prevVal = previousValue;
+                    break;
+                case "dessertGrid":
+                    prev = previousValue;
+                    break;
+
+            }
+        }
+
+        int prevValue = 0;
+        private void Quantity_ValueChanged(object sender, EventArgs e)
+        {      
+            qttChg(priceTextBox, foodGrid, (int)Quantity.Value, prevValue);
+        }
+
+        int prevVal = 0;
+        private void drinkQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            qttChg(drinkPriceTextBox, drinkGrid, (int)drinkQuantity.Value, prevVal);
+        }
+
         int prev = 0;
         private void dessertQuantity_ValueChanged(object sender, EventArgs e)
         {
-            int price = Int16.Parse(dessertPriceTextBox.Text);
-            int temp;
-            int row = dessertGrid.CurrentCell.RowIndex;
-            DataGridViewRow row2 = dessertGrid.Rows[row];
-            temp = Int16.Parse(row2.Cells[2].Value.ToString());
-            if (dessertQuantity.Value > prev)
-            {
-                price += temp;
-                dessertPriceTextBox.Text = price.ToString();
-            }
-            else if (dessertQuantity.Value < prev)
-            {
-                price -= temp;
-                dessertPriceTextBox.Text = price.ToString();
-            }
-            prev = (int)dessertQuantity.Value;
+            qttChg(dessertPriceTextBox, dessertGrid, (int)dessertQuantity.Value, prev);
         }
+
     }
 }
 
