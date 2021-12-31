@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.masalarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.masalarBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // masalarBindingSource
+            // 
+            this.masalarBindingSource.DataSource = typeof(WindowsProg.Masalar);
             // 
             // Masalar
             // 
@@ -39,10 +46,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Masalar";
             this.Text = "Masalar";
+            ((System.ComponentModel.ISupportInitialize)(this.masalarBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.BindingSource masalarBindingSource;
     }
 }

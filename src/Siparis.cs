@@ -20,7 +20,7 @@ namespace WindowsProg
         }
 
         private WindowsProg.UserDataEntities2 dbcontext = new WindowsProg.UserDataEntities2();
-
+        private WindowsProg.UserDataEntities3Masalar dbMasalar = new WindowsProg.UserDataEntities3Masalar();
         private void Siparis_Load(object sender, EventArgs e)
         {
             foodLoad();
@@ -148,9 +148,47 @@ namespace WindowsProg
                     fOrder.inStock -= (int)Quantity.Value;
                 }
 
+                var query2 = from drinkOrder in dbcontext.Products
+                             where drinkOrder.ProductName == drinkNameTextBox.Text
+                             select drinkOrder;
+                foreach(Product dOrder in query2)
+                {
+                    dOrder.inStock -= (int)drinkQuantity.Value;
+                }
+
+                var query3 = from dessertOrder in dbcontext.Products
+                             where dessertOrder.ProductName == dessertNameTextBox.Text
+                             select dessertOrder;
+
+                foreach(Product dsOrder in query3)
+                {
+                    dsOrder.inStock -= (int)dessertQuantity.Value;
+                }
+
+                MessageBox.Show("Payment Succesfull");
+
                 dbcontext.SaveChanges();
 
                 this.Refresh();
+                
+            }else if (toTableRadioButton.Checked)
+            {
+                var checkedButton = tableGroupBox.Controls.OfType<RadioButton>()
+                                      .FirstOrDefault(r => r.Checked);
+
+                string tableID = checkedButton.Text;
+
+                var masa = from massa in dbMasalar.CafeTables
+                           where massa.tableID.Equals(tableID)
+                           select massa;
+
+                foreach(CafeTable tab in masa)
+                {
+                    tab.table_total = (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
+                }
+
+                dbMasalar.SaveChanges();
+                
             }
         }
     }

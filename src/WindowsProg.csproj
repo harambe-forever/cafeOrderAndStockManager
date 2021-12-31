@@ -83,6 +83,9 @@
     <Compile Include="Ayarlar.Designer.cs">
       <DependentUpon>Ayarlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CafeTable.cs">
+      <DependentUpon>MasalarModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Envanter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +109,21 @@
     </Compile>
     <Compile Include="Masalar.Designer.cs">
       <DependentUpon>Masalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasalarModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasalarModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasalarModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasalarModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasalarModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasalarModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -187,6 +205,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="MasalarModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MasalarModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MasalarModel.edmx.diagram">
+      <DependentUpon>MasalarModel.edmx</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -225,6 +250,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasalarModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MasalarModel.edmx</DependentUpon>
+      <LastGenOutput>MasalarModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MasalarModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MasalarModel.edmx</DependentUpon>
+      <LastGenOutput>MasalarModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
