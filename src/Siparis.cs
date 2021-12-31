@@ -52,33 +52,32 @@ namespace WindowsProg
             dessertGrid.DataSource = queryDessert.ToList();
         }
 
-        private void foodGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void gridCellClick(DataGridView gridName, TextBox nameTextBox, TextBox priceTextBox, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = foodGrid.Rows[e.RowIndex];
-                foodNameTextBox.Text = row.Cells[0].Value.ToString();
+                DataGridViewRow row = gridName.Rows[e.RowIndex];
+                nameTextBox.Text = row.Cells[0].Value.ToString();
                 priceTextBox.Text = row.Cells[2].Value.ToString();
-            }            
+            }
+        }
+        private void foodGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Quantity.Value = 1;
+            gridCellClick(foodGrid, foodNameTextBox, priceTextBox, e);        
         }
         private void drinkGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = drinkGrid.Rows[e.RowIndex];
-                drinkNameTextBox.Text = row.Cells[0].Value.ToString();
-                drinkPriceTextBox.Text = row.Cells[2].Value.ToString();
-            }
+            drinkQuantity.Value = 1;
+            gridCellClick(drinkGrid, drinkNameTextBox, drinkPriceTextBox, e);
         }
         private void dessertGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dessertGrid.Rows[e.RowIndex];
-                dessertNameTextBox.Text = row.Cells[0].Value.ToString();
-                dessertPriceTextBox.Text = row.Cells[2].Value.ToString();
-            }
+            dessertQuantity.Value = 1;
+            gridCellClick(dessertGrid, dessertNameTextBox, dessertPriceTextBox, e);
         }
+
+        
 
         private void qttChg(TextBox textBoxName, DataGridView dataGridName, int qtt, int previousValue)
         {
@@ -131,6 +130,29 @@ namespace WindowsProg
             qttChg(dessertPriceTextBox, dessertGrid, (int)dessertQuantity.Value, prev);
         }
 
+        private void toTableRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            tableGroupBox.Visible = toTableRadioButton.Checked;
+        }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            if (takeawayRadioButton.Checked)
+            {
+                var query = from foodOrder in dbcontext.Products
+                            where foodOrder.ProductName == foodNameTextBox.Text
+                            select foodOrder;
+
+                foreach(Product fOrder in query)
+                {
+                    fOrder.inStock -= (int)Quantity.Value;
+                }
+
+                dbcontext.SaveChanges();
+
+                this.Refresh();
+            }
+        }
     }
 }
 
