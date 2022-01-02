@@ -86,6 +86,9 @@
     <Compile Include="CafeTable.cs">
       <DependentUpon>MasalarModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Delivery.cs">
+      <DependentUpon>ModelDelivery.tt</DependentUpon>
+    </Compile>
     <Compile Include="Envanter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +142,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDelivery.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDelivery.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDelivery.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDelivery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDelivery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDelivery.edmx</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>ProductsMDLson.tt</DependentUpon>
@@ -215,6 +233,13 @@
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="ModelDelivery.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDelivery.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDelivery.edmx.diagram">
+      <DependentUpon>ModelDelivery.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <EntityDeploy Include="ProductsMDLson.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -224,6 +249,7 @@
       <DependentUpon>ProductsMDLson.edmx</DependentUpon>
     </None>
     <None Include="Properties\DataSources\CafeTable.datasource" />
+    <None Include="Properties\DataSources\Delivery.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Table.datasource" />
     <None Include="Properties\Settings.settings">
@@ -270,6 +296,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDelivery.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDelivery.edmx</DependentUpon>
+      <LastGenOutput>ModelDelivery.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDelivery.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDelivery.edmx</DependentUpon>
+      <LastGenOutput>ModelDelivery.cs</LastGenOutput>
     </Content>
     <Content Include="ProductsMDLson.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

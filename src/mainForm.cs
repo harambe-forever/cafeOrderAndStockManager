@@ -17,6 +17,8 @@ namespace WindowsProg
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private WindowsProg.UserDataEntities dbCalisan = new WindowsProg.UserDataEntities();
+
         public mainForm()
         {
             InitializeComponent();
@@ -141,8 +143,13 @@ namespace WindowsProg
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new Ayarlar());
+            
+           
+      
+                ActivateButton(sender, RGBColors.color4);
+                OpenChildForm(new Ayarlar());
+         
+            
         }
     }
 }

@@ -170,6 +170,9 @@ namespace WindowsProg
             {
                 dsOrder.inStock -= (int)dessertQuantity.Value;
             }
+
+            dbcontext.SaveChanges();
+
         }
 
         private void payButton_Click(object sender, EventArgs e)
@@ -178,9 +181,10 @@ namespace WindowsProg
             if (takeawayRadioButton.Checked)
             {
                 stockUpdate();
-                dbcontext.SaveChanges();
                 this.Refresh();
-                MessageBox.Show("Payment Succesfull");
+                MessageBox.Show("Payment successful, payment amount: " + 
+                    (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text)) + 
+                    " bucks.");
             }
             else
             {
@@ -203,7 +207,7 @@ namespace WindowsProg
 
             foreach (CafeTable tab in query4)
             {
-                tab.table_total = (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
+                tab.table_total += (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
             }
 
             dbMasalar.SaveChanges();

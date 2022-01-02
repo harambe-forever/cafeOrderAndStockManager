@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.userDataDataSet = new WindowsProg.UserDataDataSet();
             this.foodGrid = new System.Windows.Forms.DataGridView();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.drinkGrid = new System.Windows.Forms.DataGridView();
             this.dessertGrid = new System.Windows.Forms.DataGridView();
             this.foodGroupBox = new System.Windows.Forms.GroupBox();
@@ -57,18 +58,18 @@
             this.table1RadioButton = new System.Windows.Forms.RadioButton();
             this.payButton = new FontAwesome.Sharp.IconButton();
             this.saveTableButton = new FontAwesome.Sharp.IconButton();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).BeginInit();
             this.foodGroupBox.SuspendLayout();
@@ -79,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dessertQuantity)).BeginInit();
             this.tableOrTakeawayGroupBox.SuspendLayout();
             this.tableGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // userDataDataSet
@@ -101,6 +101,10 @@
             this.foodGrid.Size = new System.Drawing.Size(320, 170);
             this.foodGrid.TabIndex = 0;
             this.foodGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGrid_CellClick);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
             // 
             // drinkGrid
             // 
@@ -428,63 +432,68 @@
             this.saveTableButton.Visible = false;
             this.saveTableButton.Click += new System.EventHandler(this.saveTableButton_Click);
             // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn8.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "PricePerUnit";
-            this.dataGridViewTextBoxColumn9.HeaderText = "PricePerUnit";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn5.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PricePerUnit";
-            this.dataGridViewTextBoxColumn6.HeaderText = "PricePerUnit";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
             this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "inStock";
             this.dataGridViewTextBoxColumn3.HeaderText = "inStock";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 50;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "PricePerUnit";
             this.dataGridViewTextBoxColumn4.HeaderText = "PricePerUnit";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn5.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn6.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn8.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn9.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 75;
             // 
             // Siparis
             // 
@@ -508,6 +517,7 @@
             this.Load += new System.EventHandler(this.Siparis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).EndInit();
             this.foodGroupBox.ResumeLayout(false);
@@ -523,7 +533,6 @@
             this.tableOrTakeawayGroupBox.PerformLayout();
             this.tableGroupBox.ResumeLayout(false);
             this.tableGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,17 +542,8 @@
         private UserDataDataSet userDataDataSet;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridView foodGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridView drinkGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridView dessertGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.GroupBox foodGroupBox;
         private System.Windows.Forms.TextBox foodNameTextBox;
         private System.Windows.Forms.TextBox priceTextBox;
@@ -568,5 +568,14 @@
         private System.Windows.Forms.RadioButton table2RadioButton;
         private FontAwesome.Sharp.IconButton payButton;
         private FontAwesome.Sharp.IconButton saveTableButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }
