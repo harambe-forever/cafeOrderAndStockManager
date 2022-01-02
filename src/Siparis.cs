@@ -20,7 +20,8 @@ namespace WindowsProg
         }
 
         private WindowsProg.UserDataEntities2 dbcontext = new WindowsProg.UserDataEntities2();
-        private WindowsProg.UserDataEntities3Masalar dbMasalar = new WindowsProg.UserDataEntities3Masalar();
+        private WindowsProg.UserDataEntitiesMasalar dbMasalar = new WindowsProg.UserDataEntitiesMasalar();
+
         private void Siparis_Load(object sender, EventArgs e)
         {
             foodLoad();
@@ -133,64 +134,83 @@ namespace WindowsProg
         private void toTableRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             tableGroupBox.Visible = toTableRadioButton.Checked;
+            payButton.Hide();
+            saveTableButton.Show();
+        }
+        private void takeawayRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            payButton.Show();
+            saveTableButton.Hide();
+        }
+
+        private void stockUpdate()
+        {
+            var query = from foodOrder in dbcontext.Products
+                        where foodOrder.ProductName == foodNameTextBox.Text
+                        select foodOrder;
+
+            foreach (Product fOrder in query)
+            {
+                fOrder.inStock -= (int)Quantity.Value;
+            }
+
+            var query2 = from drinkOrder in dbcontext.Products
+                         where drinkOrder.ProductName == drinkNameTextBox.Text
+                         select drinkOrder;
+            foreach (Product dOrder in query2)
+            {
+                dOrder.inStock -= (int)drinkQuantity.Value;
+            }
+
+            var query3 = from dessertOrder in dbcontext.Products
+                         where dessertOrder.ProductName == dessertNameTextBox.Text
+                         select dessertOrder;
+
+            foreach (Product dsOrder in query3)
+            {
+                dsOrder.inStock -= (int)dessertQuantity.Value;
+            }
         }
 
         private void payButton_Click(object sender, EventArgs e)
         {
+
             if (takeawayRadioButton.Checked)
             {
-                var query = from foodOrder in dbcontext.Products
-                            where foodOrder.ProductName == foodNameTextBox.Text
-                            select foodOrder;
-
-                foreach(Product fOrder in query)
-                {
-                    fOrder.inStock -= (int)Quantity.Value;
-                }
-
-                var query2 = from drinkOrder in dbcontext.Products
-                             where drinkOrder.ProductName == drinkNameTextBox.Text
-                             select drinkOrder;
-                foreach(Product dOrder in query2)
-                {
-                    dOrder.inStock -= (int)drinkQuantity.Value;
-                }
-
-                var query3 = from dessertOrder in dbcontext.Products
-                             where dessertOrder.ProductName == dessertNameTextBox.Text
-                             select dessertOrder;
-
-                foreach(Product dsOrder in query3)
-                {
-                    dsOrder.inStock -= (int)dessertQuantity.Value;
-                }
-
-                MessageBox.Show("Payment Succesfull");
-
+                stockUpdate();
                 dbcontext.SaveChanges();
-
                 this.Refresh();
-                
-            }else if (toTableRadioButton.Checked)
+                MessageBox.Show("Payment Succesfull");
+            }
+            else
             {
-                var checkedButton = tableGroupBox.Controls.OfType<RadioButton>()
-                                      .FirstOrDefault(r => r.Checked);
-
-                string tableID = checkedButton.Text;
-
-                var masa = from massa in dbMasalar.CafeTables
-                           where massa.tableID.Equals(tableID)
-                           select massa;
-
-                foreach(CafeTable tab in masa)
-                {
-                    tab.table_total = (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
-                }
-
-                dbMasalar.SaveChanges();
-                
+                MessageBox.Show("You need to specify table or takeout!");                     
             }
         }
+
+        private void saveTableButton_Click(object sender, EventArgs e)
+        {
+            stockUpdate();
+
+            var checkedButton = tableGroupBox.Controls.OfType<RadioButton>()
+                                      .FirstOrDefault(r => r.Checked);
+
+            string tableID = checkedButton.Text;
+
+            var query4 = from masaData in dbMasalar.CafeTables
+                         where masaData.tableID == tableID
+                         select masaData;
+
+            foreach (CafeTable tab in query4)
+            {
+                tab.table_total = (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
+            }
+
+            dbMasalar.SaveChanges();
+            this.Refresh();
+        }
+
+        
     }
 }
 

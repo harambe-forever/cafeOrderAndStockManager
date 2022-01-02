@@ -46,16 +46,17 @@
             this.dessertPriceTextBox = new System.Windows.Forms.TextBox();
             this.dessertNameTextBox = new System.Windows.Forms.TextBox();
             this.tableOrTakeawayGroupBox = new System.Windows.Forms.GroupBox();
-            this.toTableRadioButton = new System.Windows.Forms.RadioButton();
             this.takeawayRadioButton = new System.Windows.Forms.RadioButton();
+            this.toTableRadioButton = new System.Windows.Forms.RadioButton();
             this.tableGroupBox = new System.Windows.Forms.GroupBox();
-            this.table1RadioButton = new System.Windows.Forms.RadioButton();
-            this.table2RadioButton = new System.Windows.Forms.RadioButton();
-            this.table3RadioButton = new System.Windows.Forms.RadioButton();
-            this.table4RadioButton = new System.Windows.Forms.RadioButton();
-            this.table5RadioButton = new System.Windows.Forms.RadioButton();
             this.table6RadioButton = new System.Windows.Forms.RadioButton();
+            this.table5RadioButton = new System.Windows.Forms.RadioButton();
+            this.table4RadioButton = new System.Windows.Forms.RadioButton();
+            this.table3RadioButton = new System.Windows.Forms.RadioButton();
+            this.table2RadioButton = new System.Windows.Forms.RadioButton();
+            this.table1RadioButton = new System.Windows.Forms.RadioButton();
             this.payButton = new FontAwesome.Sharp.IconButton();
+            this.saveTableButton = new FontAwesome.Sharp.IconButton();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,6 +166,7 @@
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(100, 157);
             this.priceTextBox.TabIndex = 1;
+            this.priceTextBox.Text = "0";
             // 
             // foodNameTextBox
             // 
@@ -210,6 +212,7 @@
             this.drinkPriceTextBox.Name = "drinkPriceTextBox";
             this.drinkPriceTextBox.Size = new System.Drawing.Size(100, 157);
             this.drinkPriceTextBox.TabIndex = 1;
+            this.drinkPriceTextBox.Text = "0";
             // 
             // drinkNameTextBox
             // 
@@ -255,6 +258,7 @@
             this.dessertPriceTextBox.Name = "dessertPriceTextBox";
             this.dessertPriceTextBox.Size = new System.Drawing.Size(100, 157);
             this.dessertPriceTextBox.TabIndex = 1;
+            this.dessertPriceTextBox.Text = "0";
             // 
             // dessertNameTextBox
             // 
@@ -277,6 +281,19 @@
             this.tableOrTakeawayGroupBox.TabStop = false;
             this.tableOrTakeawayGroupBox.Text = "Table or Takeaway";
             // 
+            // takeawayRadioButton
+            // 
+            this.takeawayRadioButton.AutoSize = true;
+            this.takeawayRadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.takeawayRadioButton.Location = new System.Drawing.Point(6, 48);
+            this.takeawayRadioButton.Name = "takeawayRadioButton";
+            this.takeawayRadioButton.Size = new System.Drawing.Size(102, 22);
+            this.takeawayRadioButton.TabIndex = 1;
+            this.takeawayRadioButton.TabStop = true;
+            this.takeawayRadioButton.Text = "Takeaway";
+            this.takeawayRadioButton.UseVisualStyleBackColor = true;
+            this.takeawayRadioButton.CheckedChanged += new System.EventHandler(this.takeawayRadioButton_CheckedChanged);
+            // 
             // toTableRadioButton
             // 
             this.toTableRadioButton.AutoSize = true;
@@ -289,18 +306,6 @@
             this.toTableRadioButton.Text = "To Table";
             this.toTableRadioButton.UseVisualStyleBackColor = true;
             this.toTableRadioButton.CheckedChanged += new System.EventHandler(this.toTableRadioButton_CheckedChanged);
-            // 
-            // takeawayRadioButton
-            // 
-            this.takeawayRadioButton.AutoSize = true;
-            this.takeawayRadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.takeawayRadioButton.Location = new System.Drawing.Point(6, 48);
-            this.takeawayRadioButton.Name = "takeawayRadioButton";
-            this.takeawayRadioButton.Size = new System.Drawing.Size(102, 22);
-            this.takeawayRadioButton.TabIndex = 1;
-            this.takeawayRadioButton.TabStop = true;
-            this.takeawayRadioButton.Text = "Takeaway";
-            this.takeawayRadioButton.UseVisualStyleBackColor = true;
             // 
             // tableGroupBox
             // 
@@ -318,53 +323,17 @@
             this.tableGroupBox.Text = "Tables";
             this.tableGroupBox.Visible = false;
             // 
-            // table1RadioButton
+            // table6RadioButton
             // 
-            this.table1RadioButton.AutoSize = true;
-            this.table1RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table1RadioButton.Location = new System.Drawing.Point(7, 24);
-            this.table1RadioButton.Name = "table1RadioButton";
-            this.table1RadioButton.Size = new System.Drawing.Size(78, 22);
-            this.table1RadioButton.TabIndex = 0;
-            this.table1RadioButton.TabStop = true;
-            this.table1RadioButton.Text = "Table 1";
-            this.table1RadioButton.UseVisualStyleBackColor = true;
-            // 
-            // table2RadioButton
-            // 
-            this.table2RadioButton.AutoSize = true;
-            this.table2RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table2RadioButton.Location = new System.Drawing.Point(7, 52);
-            this.table2RadioButton.Name = "table2RadioButton";
-            this.table2RadioButton.Size = new System.Drawing.Size(78, 22);
-            this.table2RadioButton.TabIndex = 1;
-            this.table2RadioButton.TabStop = true;
-            this.table2RadioButton.Text = "Table 2";
-            this.table2RadioButton.UseVisualStyleBackColor = true;
-            // 
-            // table3RadioButton
-            // 
-            this.table3RadioButton.AutoSize = true;
-            this.table3RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table3RadioButton.Location = new System.Drawing.Point(6, 80);
-            this.table3RadioButton.Name = "table3RadioButton";
-            this.table3RadioButton.Size = new System.Drawing.Size(78, 22);
-            this.table3RadioButton.TabIndex = 2;
-            this.table3RadioButton.TabStop = true;
-            this.table3RadioButton.Text = "Table 3";
-            this.table3RadioButton.UseVisualStyleBackColor = true;
-            // 
-            // table4RadioButton
-            // 
-            this.table4RadioButton.AutoSize = true;
-            this.table4RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table4RadioButton.Location = new System.Drawing.Point(113, 24);
-            this.table4RadioButton.Name = "table4RadioButton";
-            this.table4RadioButton.Size = new System.Drawing.Size(78, 22);
-            this.table4RadioButton.TabIndex = 3;
-            this.table4RadioButton.TabStop = true;
-            this.table4RadioButton.Text = "Table 4";
-            this.table4RadioButton.UseVisualStyleBackColor = true;
+            this.table6RadioButton.AutoSize = true;
+            this.table6RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.table6RadioButton.Location = new System.Drawing.Point(113, 80);
+            this.table6RadioButton.Name = "table6RadioButton";
+            this.table6RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table6RadioButton.TabIndex = 5;
+            this.table6RadioButton.TabStop = true;
+            this.table6RadioButton.Text = "Table 6";
+            this.table6RadioButton.UseVisualStyleBackColor = true;
             // 
             // table5RadioButton
             // 
@@ -378,17 +347,53 @@
             this.table5RadioButton.Text = "Table 5";
             this.table5RadioButton.UseVisualStyleBackColor = true;
             // 
-            // table6RadioButton
+            // table4RadioButton
             // 
-            this.table6RadioButton.AutoSize = true;
-            this.table6RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table6RadioButton.Location = new System.Drawing.Point(113, 80);
-            this.table6RadioButton.Name = "table6RadioButton";
-            this.table6RadioButton.Size = new System.Drawing.Size(78, 22);
-            this.table6RadioButton.TabIndex = 5;
-            this.table6RadioButton.TabStop = true;
-            this.table6RadioButton.Text = "Table 6";
-            this.table6RadioButton.UseVisualStyleBackColor = true;
+            this.table4RadioButton.AutoSize = true;
+            this.table4RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.table4RadioButton.Location = new System.Drawing.Point(113, 24);
+            this.table4RadioButton.Name = "table4RadioButton";
+            this.table4RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table4RadioButton.TabIndex = 3;
+            this.table4RadioButton.TabStop = true;
+            this.table4RadioButton.Text = "Table 4";
+            this.table4RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // table3RadioButton
+            // 
+            this.table3RadioButton.AutoSize = true;
+            this.table3RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.table3RadioButton.Location = new System.Drawing.Point(6, 80);
+            this.table3RadioButton.Name = "table3RadioButton";
+            this.table3RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table3RadioButton.TabIndex = 2;
+            this.table3RadioButton.TabStop = true;
+            this.table3RadioButton.Text = "Table 3";
+            this.table3RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // table2RadioButton
+            // 
+            this.table2RadioButton.AutoSize = true;
+            this.table2RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.table2RadioButton.Location = new System.Drawing.Point(7, 52);
+            this.table2RadioButton.Name = "table2RadioButton";
+            this.table2RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table2RadioButton.TabIndex = 1;
+            this.table2RadioButton.TabStop = true;
+            this.table2RadioButton.Text = "Table 2";
+            this.table2RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // table1RadioButton
+            // 
+            this.table1RadioButton.AutoSize = true;
+            this.table1RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.table1RadioButton.Location = new System.Drawing.Point(7, 24);
+            this.table1RadioButton.Name = "table1RadioButton";
+            this.table1RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table1RadioButton.TabIndex = 0;
+            this.table1RadioButton.TabStop = true;
+            this.table1RadioButton.Text = "Table 1";
+            this.table1RadioButton.UseVisualStyleBackColor = true;
             // 
             // payButton
             // 
@@ -405,6 +410,23 @@
             this.payButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.payButton.UseVisualStyleBackColor = true;
             this.payButton.Click += new System.EventHandler(this.payButton_Click);
+            // 
+            // saveTableButton
+            // 
+            this.saveTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveTableButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.saveTableButton.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.saveTableButton.IconColor = System.Drawing.Color.Violet;
+            this.saveTableButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.saveTableButton.Location = new System.Drawing.Point(671, 408);
+            this.saveTableButton.Name = "saveTableButton";
+            this.saveTableButton.Size = new System.Drawing.Size(101, 102);
+            this.saveTableButton.TabIndex = 9;
+            this.saveTableButton.Text = "Save Table";
+            this.saveTableButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.saveTableButton.UseVisualStyleBackColor = true;
+            this.saveTableButton.Visible = false;
+            this.saveTableButton.Click += new System.EventHandler(this.saveTableButton_Click);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -470,6 +492,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1064, 576);
+            this.Controls.Add(this.saveTableButton);
             this.Controls.Add(this.payButton);
             this.Controls.Add(this.tableGroupBox);
             this.Controls.Add(this.tableOrTakeawayGroupBox);
@@ -544,5 +567,6 @@
         private System.Windows.Forms.RadioButton table3RadioButton;
         private System.Windows.Forms.RadioButton table2RadioButton;
         private FontAwesome.Sharp.IconButton payButton;
+        private FontAwesome.Sharp.IconButton saveTableButton;
     }
 }

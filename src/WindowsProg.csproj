@@ -223,6 +223,7 @@
     <None Include="ProductsMDLson.edmx.diagram">
       <DependentUpon>ProductsMDLson.edmx</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\CafeTable.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\DataSources\Table.datasource" />
     <None Include="Properties\Settings.settings">
