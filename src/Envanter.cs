@@ -15,9 +15,18 @@ namespace WindowsProg
         public Envanter()
         {
             InitializeComponent();
+            
         }
 
-        int id;
+        private static int randomIDGenerator()
+        {
+            Random rnd = new Random();
+            int randId = rnd.Next(1000);
+            return randId;
+        }
+
+        int id = randomIDGenerator();
+        int cost;
         private WindowsProg.UserDataEntities2 dbcontext = new WindowsProg.UserDataEntities2();
         private WindowsProg.UserDataEntitiesDelivery dbDelivery = new WindowsProg.UserDataEntitiesDelivery();
         private void Envanter_Load(object sender, EventArgs e)
@@ -25,8 +34,15 @@ namespace WindowsProg
             foodLoad();
             drinkLoad();
             dessertLoad();
+            deliveryLoad();
         }
 
+        private void deliveryLoad()
+        {
+            var queryDeliveries = from delivery in dbDelivery.Deliveries
+                                  select delivery;
+            deliveryGrid.DataSource = queryDeliveries.ToList();
+        }
         private void foodLoad()
         {
             var queryFood = from food in dbcontext.Products
@@ -62,21 +78,32 @@ namespace WindowsProg
             orderButton.Show();
             dateTimePicker.Show();
         }
-        /*
-         QUANTITY FALAN DA EKLIYCEN MK HAYATTA UGRASMAZSIN BUNLA AKSAM AKSAM
-         */
         private void orderButton_Click(object sender, EventArgs e)
         {
+            
+            var ID = from iddd in dbDelivery.Deliveries
+                     select iddd.deliveryID;
+            textBox1.Text = id.ToString();
             dbDelivery.Deliveries.Add(new Delivery()
             {
-                deliveryID = id
+                deliveryID = id,
+                Will_Order_At = DateTime.Now,
+                Expected_Delivery_Date = DateTime.Now,
+                Cost = cost
             });
             id += 1;
+            dbDelivery.SaveChanges();
+            deliveryGrid.Refresh();
+            this.Refresh();         
         }
 
+
+        /* 
+         Cell degtistirecegin zaman sifirlayip degistirmen gerekiyor
+        */
         private void qtt(DataGridView dataGridName, NumericUpDown quantityName, int quantity)
         {
-            int cost = Int16.Parse(textBox1.Text);
+            cost = Int16.Parse(textBox1.Text);
             int row = dataGridName.CurrentCell.RowIndex;
             DataGridViewRow row2 = dataGridName.Rows[row];
             int ppu; //price per unit

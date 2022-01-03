@@ -30,17 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.foodGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PricePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.drinkGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dessertGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeGroupBox = new System.Windows.Forms.GroupBox();
             this.orderNowButton = new System.Windows.Forms.RadioButton();
@@ -48,27 +41,34 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderButton = new FontAwesome.Sharp.IconButton();
             this.userDataDataSet = new WindowsProg.UserDataDataSet();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deliveryGrid = new System.Windows.Forms.DataGridView();
+            this.foodQuantity = new System.Windows.Forms.NumericUpDown();
+            this.drinkQuantity = new System.Windows.Forms.NumericUpDown();
+            this.dessertQuantity = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.deliveryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.willOrderAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expectedDeliveryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.foodQuantity = new System.Windows.Forms.NumericUpDown();
-            this.drinkQuantity = new System.Windows.Forms.NumericUpDown();
-            this.dessertQuantity = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).BeginInit();
             this.dateTimeGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // foodGrid
@@ -85,30 +85,12 @@
             this.foodGrid.Size = new System.Drawing.Size(320, 170);
             this.foodGrid.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn3.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
             // PricePerUnit
             // 
             this.PricePerUnit.DataPropertyName = "PricePerUnit";
             this.PricePerUnit.HeaderText = "PricePerUnit";
             this.PricePerUnit.Name = "PricePerUnit";
             this.PricePerUnit.Width = 75;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
             // 
             // drinkGrid
             // 
@@ -123,20 +105,6 @@
             this.drinkGrid.Name = "drinkGrid";
             this.drinkGrid.Size = new System.Drawing.Size(320, 170);
             this.drinkGrid.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn4.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 50;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -158,20 +126,6 @@
             this.dessertGrid.Name = "dessertGrid";
             this.dessertGrid.Size = new System.Drawing.Size(320, 170);
             this.dessertGrid.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn6.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 50;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -247,22 +201,62 @@
             this.userDataDataSet.DataSetName = "UserDataDataSet";
             this.userDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView1
+            // deliveryGrid
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.deliveryGrid.AllowUserToDeleteRows = false;
+            this.deliveryGrid.AutoGenerateColumns = false;
+            this.deliveryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.deliveryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deliveryIDDataGridViewTextBoxColumn,
             this.willOrderAtDataGridViewTextBoxColumn,
             this.expectedDeliveryDateDataGridViewTextBoxColumn,
             this.costDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.deliveryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 371);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(652, 150);
-            this.dataGridView1.TabIndex = 7;
+            this.deliveryGrid.DataSource = this.deliveryBindingSource;
+            this.deliveryGrid.Location = new System.Drawing.Point(18, 371);
+            this.deliveryGrid.Name = "deliveryGrid";
+            this.deliveryGrid.ReadOnly = true;
+            this.deliveryGrid.Size = new System.Drawing.Size(652, 150);
+            this.deliveryGrid.TabIndex = 7;
+            // 
+            // foodQuantity
+            // 
+            this.foodQuantity.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.foodQuantity.Location = new System.Drawing.Point(12, 188);
+            this.foodQuantity.Name = "foodQuantity";
+            this.foodQuantity.ReadOnly = true;
+            this.foodQuantity.Size = new System.Drawing.Size(120, 26);
+            this.foodQuantity.TabIndex = 8;
+            this.foodQuantity.ValueChanged += new System.EventHandler(this.foodQuantity_ValueChanged);
+            // 
+            // drinkQuantity
+            // 
+            this.drinkQuantity.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.drinkQuantity.Location = new System.Drawing.Point(338, 188);
+            this.drinkQuantity.Name = "drinkQuantity";
+            this.drinkQuantity.ReadOnly = true;
+            this.drinkQuantity.Size = new System.Drawing.Size(120, 26);
+            this.drinkQuantity.TabIndex = 9;
+            this.drinkQuantity.ValueChanged += new System.EventHandler(this.drinkQuantity_ValueChanged);
+            // 
+            // dessertQuantity
+            // 
+            this.dessertQuantity.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dessertQuantity.Location = new System.Drawing.Point(664, 188);
+            this.dessertQuantity.Name = "dessertQuantity";
+            this.dessertQuantity.ReadOnly = true;
+            this.dessertQuantity.Size = new System.Drawing.Size(120, 26);
+            this.dessertQuantity.TabIndex = 10;
+            this.dessertQuantity.ValueChanged += new System.EventHandler(this.dessertQuantity_ValueChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(713, 371);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 150);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Text = "0";
             // 
             // deliveryIDDataGridViewTextBoxColumn
             // 
@@ -298,59 +292,51 @@
             // 
             this.deliveryBindingSource.DataSource = typeof(WindowsProg.Delivery);
             // 
-            // foodQuantity
+            // dataGridViewTextBoxColumn5
             // 
-            this.foodQuantity.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.foodQuantity.Location = new System.Drawing.Point(12, 188);
-            this.foodQuantity.Name = "foodQuantity";
-            this.foodQuantity.ReadOnly = true;
-            this.foodQuantity.Size = new System.Drawing.Size(120, 26);
-            this.foodQuantity.TabIndex = 8;
-            this.foodQuantity.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.foodQuantity.ValueChanged += new System.EventHandler(this.foodQuantity_ValueChanged);
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
-            // drinkQuantity
+            // dataGridViewTextBoxColumn6
             // 
-            this.drinkQuantity.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.drinkQuantity.Location = new System.Drawing.Point(338, 188);
-            this.drinkQuantity.Name = "drinkQuantity";
-            this.drinkQuantity.ReadOnly = true;
-            this.drinkQuantity.Size = new System.Drawing.Size(120, 26);
-            this.drinkQuantity.TabIndex = 9;
-            this.drinkQuantity.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.drinkQuantity.ValueChanged += new System.EventHandler(this.drinkQuantity_ValueChanged);
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn6.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 50;
             // 
-            // dessertQuantity
+            // productBindingSource
             // 
-            this.dessertQuantity.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dessertQuantity.Location = new System.Drawing.Point(664, 188);
-            this.dessertQuantity.Name = "dessertQuantity";
-            this.dessertQuantity.ReadOnly = true;
-            this.dessertQuantity.Size = new System.Drawing.Size(120, 26);
-            this.dessertQuantity.TabIndex = 10;
-            this.dessertQuantity.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.dessertQuantity.ValueChanged += new System.EventHandler(this.dessertQuantity_ValueChanged);
+            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
             // 
-            // textBox1
+            // dataGridViewTextBoxColumn2
             // 
-            this.textBox1.Location = new System.Drawing.Point(713, 371);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 150);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "0";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn4.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn3.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 50;
             // 
             // Envanter
             // 
@@ -362,7 +348,7 @@
             this.Controls.Add(this.dessertQuantity);
             this.Controls.Add(this.drinkQuantity);
             this.Controls.Add(this.foodQuantity);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.deliveryGrid);
             this.Controls.Add(this.orderButton);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.dateTimeGroupBox);
@@ -374,17 +360,17 @@
             this.Text = "Envanter";
             this.Load += new System.EventHandler(this.Envanter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).EndInit();
             this.dateTimeGroupBox.ResumeLayout(false);
             this.dateTimeGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +388,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private FontAwesome.Sharp.IconButton orderButton;
         private UserDataDataSet userDataDataSet;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView deliveryGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliveryIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn willOrderAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expectedDeliveryDateDataGridViewTextBoxColumn;
