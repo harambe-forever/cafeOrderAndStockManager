@@ -18,14 +18,15 @@ namespace WindowsProg
             
         }
 
-        private static int randomIDGenerator()
+        
+        private static int randomIntGenerator(int len)
         {
             Random rnd = new Random();
-            int randId = rnd.Next(1000);
+            int randId = rnd.Next(len);
             return randId;
         }
 
-        int id = randomIDGenerator();
+        int id = randomIntGenerator(1000);
         int cost;
         private WindowsProg.UserDataEntities2 dbcontext = new WindowsProg.UserDataEntities2();
         private WindowsProg.UserDataEntitiesDelivery dbDelivery = new WindowsProg.UserDataEntitiesDelivery();
@@ -75,23 +76,45 @@ namespace WindowsProg
 
         private void furtherDateRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            DateTime dt = new DateTime();
+            dt = dateTimePicker.Value;
             orderButton.Show();
             dateTimePicker.Show();
         }
+
+        private void addItems(DataGridView dataGridName, NumericUpDown amount)
+        {
+            int row = dataGridName.CurrentCell.RowIndex;
+            DataGridViewRow row2 = dataGridName.Rows[row];
+            string productName = row2.Cells[0].Value.ToString();
+            int inStock = Int16.Parse(row2.Cells[1].Value.ToString());
+            inStock += (int)amount.Value;
+
+            var eklenecek = from urun in dbcontext.Products
+                            where urun.ProductName == productName
+                            select urun;
+            foreach(Product p in eklenecek)
+            {
+                p.inStock = inStock;
+            }
+            dbcontext.SaveChanges();
+            this.Refresh();
+
+        }
+
         private void orderButton_Click(object sender, EventArgs e)
         {
-            
-            var ID = from iddd in dbDelivery.Deliveries
-                     select iddd.deliveryID;
-            textBox1.Text = id.ToString();
+            addItems(foodGrid, foodQuantity);
+            addItems(drinkGrid, drinkQuantity);
+            addItems(dessertGrid, dessertQuantity);
+
             dbDelivery.Deliveries.Add(new Delivery()
             {
                 deliveryID = id,
-                Will_Order_At = DateTime.Now,
-                Expected_Delivery_Date = DateTime.Now,
+                Will_Order_At = dateTimePicker.Value,
+                Expected_Delivery_Date = dateTimePicker.Value.AddDays(randomIntGenerator(7)),
                 Cost = cost
             });
-            id += 1;
             dbDelivery.SaveChanges();
             deliveryGrid.Refresh();
             this.Refresh();         
