@@ -151,5 +151,21 @@ namespace WindowsProg
         {
             qtt(dessertGrid, dessertQuantity, oldQttForDessert);
         }
+
+        private void deliveryGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = deliveryGrid.CurrentCell.RowIndex;
+            DataGridViewRow row2 = deliveryGrid.Rows[row];
+            int rowID = (int)row2.Cells[0].Value;
+            var deletos = from delivered in dbDelivery.Deliveries
+                          where delivered.deliveryID == rowID
+                          select delivered;
+            foreach(var delete in deletos)
+            {
+                dbDelivery.Deliveries.Remove(delete);
+            }
+            dbDelivery.SaveChanges();
+            this.Refresh();
+        }
     }
 }
