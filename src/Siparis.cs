@@ -160,7 +160,7 @@ namespace WindowsProg
                     {
                         Urun_Adi = textBoxName.Text,
                         Satis = Int16.Parse(priceTB.Text),
-                        Alis = null
+                        Alis = 0
                     });
                 }
             }

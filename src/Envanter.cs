@@ -126,7 +126,7 @@ namespace WindowsProg
                     dbSatisAlis.SatisAlis.Add(new SatisAli()
                     {
                         Urun_Adi = productName,
-                        Satis = null,
+                        Satis = 0,
                         Alis = ppu
                     });
                 }
