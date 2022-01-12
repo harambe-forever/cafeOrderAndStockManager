@@ -16,5 +16,12 @@ namespace WindowsProg
         {
             InitializeComponent();
         }
+
+        private void Ayarlar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 
     }
 }

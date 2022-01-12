@@ -178,6 +178,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatisAli.cs">
+      <DependentUpon>SatisAlisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatisAlisModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatisAlisModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatisAlisModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatisAlisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatisAlisModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SatisAlisModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Siparis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +269,7 @@
     <None Include="Properties\DataSources\CafeTable.datasource" />
     <None Include="Properties\DataSources\Delivery.datasource" />
     <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\SatisAli.datasource" />
     <None Include="Properties\DataSources\Table.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -261,6 +280,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SatisAlisModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SatisAlisModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SatisAlisModel.edmx.diagram">
+      <DependentUpon>SatisAlisModel.edmx</DependentUpon>
+    </None>
     <None Include="UserDataDataSet.xsc">
       <DependentUpon>UserDataDataSet.xsd</DependentUpon>
     </None>
@@ -316,6 +342,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProductsMDLson.edmx</DependentUpon>
       <LastGenOutput>ProductsMDLson.cs</LastGenOutput>
+    </Content>
+    <Content Include="SatisAlisModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SatisAlisModel.edmx</DependentUpon>
+      <LastGenOutput>SatisAlisModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SatisAlisModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SatisAlisModel.edmx</DependentUpon>
+      <LastGenOutput>SatisAlisModel.cs</LastGenOutput>
     </Content>
     <Content Include="UserData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

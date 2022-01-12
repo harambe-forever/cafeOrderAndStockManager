@@ -131,6 +131,7 @@ namespace WindowsProg
             DataGridViewRow row2 = dataGridName.Rows[row];
             int ppu; //price per unit
             ppu = Int16.Parse(row2.Cells[2].Value.ToString());
+            ppu = ppu - ((ppu * 25) / 100);
             if(quantityName.Value > quantity)
             {
                 //cost += (ppu * (int)quantityName.Value);
