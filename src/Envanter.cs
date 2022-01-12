@@ -30,6 +30,7 @@ namespace WindowsProg
         int cost;
         private WindowsProg.UserDataEntities2 dbcontext = new WindowsProg.UserDataEntities2();
         private WindowsProg.UserDataEntitiesDelivery dbDelivery = new WindowsProg.UserDataEntitiesDelivery();
+        private WindowsProg.SatisAlisEntity dbSatisAlis = new WindowsProg.SatisAlisEntity();
         private void Envanter_Load(object sender, EventArgs e)
         {
             foodLoad();
@@ -100,8 +101,39 @@ namespace WindowsProg
             dbcontext.SaveChanges();
             this.Refresh();
 
-        }
+            int ppu = Int16.Parse(row2.Cells[2].Value.ToString());
+            ppu = (ppu - ((ppu * 25) / 100)) * (int)amount.Value;
 
+            /*if(amount.Value > 0)
+            {
+                dbSatisAlis.SatisAlis.Add(new SatisAli()
+                {
+                    Urun_Adi = productName,
+                    Satis = null,
+                    Alis = ppu
+                });
+                dbSatisAlis.SaveChanges();
+            }*/
+            if(amount.Value > 0)
+            {
+                var qry1 = dbSatisAlis.SatisAlis.Where(x => x.Urun_Adi == productName).FirstOrDefault();
+                if(qry1 != null)
+                {
+                    qry1.Alis += ppu;
+                }
+                else
+                {
+                    dbSatisAlis.SatisAlis.Add(new SatisAli()
+                    {
+                        Urun_Adi = productName,
+                        Satis = null,
+                        Alis = ppu
+                    });
+                }
+            }
+            dbSatisAlis.SaveChanges();
+
+        }
         private void orderButton_Click(object sender, EventArgs e)
         {
             addItems(foodGrid, foodQuantity);

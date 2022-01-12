@@ -16,12 +16,19 @@ namespace WindowsProg
         {
             InitializeComponent();
         }
+        private WindowsProg.SatisAlisEntity dbSatisAlis = new WindowsProg.SatisAlisEntity();
+
 
         private void Ayarlar_Load(object sender, EventArgs e)
         {
-
+            satisAlisGridLoad();
         }
 
-        private void 
+        private void satisAlisGridLoad()
+        {
+            var querySatisAlis = from liste in dbSatisAlis.SatisAlis
+                                  select liste;
+            satisAlisGrid.DataSource = querySatisAlis.ToList();
+        }
     }
 }

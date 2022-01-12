@@ -21,6 +21,7 @@ namespace WindowsProg
 
         private WindowsProg.UserDataEntities2 dbcontext = new WindowsProg.UserDataEntities2();
         private WindowsProg.UserDataEntitiesMasalar dbMasalar = new WindowsProg.UserDataEntitiesMasalar();
+        private WindowsProg.SatisAlisEntity dbSatisAlis = new WindowsProg.SatisAlisEntity();
 
         private void Siparis_Load(object sender, EventArgs e)
         {
@@ -143,6 +144,29 @@ namespace WindowsProg
             saveTableButton.Hide();
         }
 
+
+        private void satisUpdate(TextBox textBoxName, TextBox priceTB, NumericUpDown amount)
+        {
+            if(amount.Value > 0)
+            {
+                var qry1 = dbSatisAlis.SatisAlis.Where(x => x.Urun_Adi == textBoxName.Text).FirstOrDefault();
+                if (qry1 != null)
+                {
+                    qry1.Satis += Int16.Parse(priceTB.Text);
+                }
+                else
+                {
+                    dbSatisAlis.SatisAlis.Add(new SatisAli()
+                    {
+                        Urun_Adi = textBoxName.Text,
+                        Satis = Int16.Parse(priceTB.Text),
+                        Alis = null
+                    });
+                }
+            }
+            dbSatisAlis.SaveChanges();
+
+        }
         private void stockUpdate()
         {
             var query = from foodOrder in dbcontext.Products
@@ -154,6 +178,25 @@ namespace WindowsProg
                 fOrder.inStock -= (int)Quantity.Value;
             }
 
+            satisUpdate(foodNameTextBox, priceTextBox, Quantity);
+            /*if(Quantity.Value > 0)
+            {
+                var qry1 = dbSatisAlis.SatisAlis.Where(x => x.Urun_Adi == foodNameTextBox.Text).FirstOrDefault();
+                if(qry1 != null)
+                {
+                    qry1.Satis += Int16.Parse(priceTextBox.Text);
+                }
+                else
+                {
+                    dbSatisAlis.SatisAlis.Add(new SatisAli()
+                    {
+                        Urun_Adi = foodNameTextBox.Text,
+                        Satis = Int16.Parse(priceTextBox.Text),
+                        Alis = null
+                    });
+                }
+            }*/
+
             var query2 = from drinkOrder in dbcontext.Products
                          where drinkOrder.ProductName == drinkNameTextBox.Text
                          select drinkOrder;
@@ -161,6 +204,8 @@ namespace WindowsProg
             {
                 dOrder.inStock -= (int)drinkQuantity.Value;
             }
+
+            satisUpdate(drinkNameTextBox, drinkPriceTextBox, drinkQuantity);
 
             var query3 = from dessertOrder in dbcontext.Products
                          where dessertOrder.ProductName == dessertNameTextBox.Text
@@ -171,8 +216,9 @@ namespace WindowsProg
                 dsOrder.inStock -= (int)dessertQuantity.Value;
             }
 
-            dbcontext.SaveChanges();
+            satisUpdate(dessertNameTextBox, dessertPriceTextBox, dessertQuantity);
 
+            dbcontext.SaveChanges();
         }
 
         private void payButton_Click(object sender, EventArgs e)
@@ -190,6 +236,11 @@ namespace WindowsProg
             {
                 MessageBox.Show("You need to specify table or takeout!");                     
             }
+        }
+
+        private void findAndReport()
+        {
+
         }
 
         private void saveTableButton_Click(object sender, EventArgs e)
