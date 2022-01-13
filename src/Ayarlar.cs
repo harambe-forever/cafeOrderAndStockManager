@@ -38,7 +38,39 @@ namespace WindowsProg
                 case 0:
                     q0(satisAlisGrid);
                     break;
+                case 1:
+                    q1(satisAlisGrid);
+                    break;
             }
+        }
+
+        private void q1(DataGridView dataGridName)
+        {
+            int count = dataGridName.Rows.Count;
+            int urunSatis = 0;
+            int urunAlis = 0;
+            DataGridViewRow currentRow;
+            for (int i = 0; i < count; i++)
+            {
+                currentRow = dataGridName.Rows[i];
+                urunSatis += Int16.Parse(currentRow.Cells[1].Value.ToString());
+                urunAlis += Int16.Parse(currentRow.Cells[2].Value.ToString());
+            }
+            int kar_zarar = urunSatis - urunAlis;
+            string hmm;
+            if (kar_zarar > 0)
+            {
+                hmm = " tl kar";
+            }
+            else if (kar_zarar < 0)
+            {
+                hmm = " tl zarar";
+            }
+            else
+            {
+                hmm = " tl yani değişiklik yok";
+            }
+            queryResultTextBox.Text = "Toplam ürünlerden elde edilen kar-zarar miktarı: " + kar_zarar.ToString() + hmm;
         }
 
         private void q0(DataGridView dataGridName)
