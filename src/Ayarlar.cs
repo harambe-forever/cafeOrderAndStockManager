@@ -17,13 +17,21 @@ namespace WindowsProg
             InitializeComponent();
         }
         private WindowsProg.SatisAlisEntity dbSatisAlis = new WindowsProg.SatisAlisEntity();
+        private WindowsProg.UserDataEntities dbUserData = new WindowsProg.UserDataEntities();
 
 
         private void Ayarlar_Load(object sender, EventArgs e)
         {
             satisAlisGridLoad();
+            usersDataGridLoad();
         }
 
+        private void usersDataGridLoad()
+        {
+            var queryUsers = from user in dbUserData.Tables
+                             select user;
+            usersDataGridView.DataSource = queryUsers.ToList();
+        }
         private void satisAlisGridLoad()
         {
             var querySatisAlis = from liste in dbSatisAlis.SatisAlis
@@ -112,6 +120,17 @@ namespace WindowsProg
             }
 
             queryle(index);
+        }
+
+        private void yeniCalisanEkleButton_Click(object sender, EventArgs e)
+        {
+            AddUserForm newUser = new AddUserForm();
+            newUser.Show();
+        }
+
+        private void showEmployees_CheckedChanged(object sender, EventArgs e)
+        {
+            usersDataGridView.Show();
         }
     }
 }

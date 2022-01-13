@@ -77,6 +77,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ayarlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ayarlar.resx">
       <DependentUpon>Ayarlar.cs</DependentUpon>
     </EmbeddedResource>

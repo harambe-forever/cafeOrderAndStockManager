@@ -143,13 +143,8 @@ namespace WindowsProg
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            
-           
-      
                 ActivateButton(sender, RGBColors.color4);
                 OpenChildForm(new Ayarlar());
-         
-            
         }
     }
 }
