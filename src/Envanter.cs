@@ -104,16 +104,6 @@ namespace WindowsProg
             int ppu = Int16.Parse(row2.Cells[2].Value.ToString());
             ppu = (ppu - ((ppu * 25) / 100)) * (int)amount.Value;
 
-            /*if(amount.Value > 0)
-            {
-                dbSatisAlis.SatisAlis.Add(new SatisAli()
-                {
-                    Urun_Adi = productName,
-                    Satis = null,
-                    Alis = ppu
-                });
-                dbSatisAlis.SaveChanges();
-            }*/
             if(amount.Value > 0)
             {
                 var qry1 = dbSatisAlis.SatisAlis.Where(x => x.Urun_Adi == productName).FirstOrDefault();
@@ -166,7 +156,6 @@ namespace WindowsProg
             ppu = ppu - ((ppu * 25) / 100);
             if(quantityName.Value > quantity)
             {
-                //cost += (ppu * (int)quantityName.Value);
                 cost += ppu;
             }
             else if (quantityName.Value < quantity)
