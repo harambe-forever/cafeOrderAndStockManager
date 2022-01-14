@@ -35,20 +35,22 @@
             this.showButton = new FontAwesome.Sharp.IconButton();
             this.yeniCalisanEkleButton = new FontAwesome.Sharp.IconButton();
             this.yaniCalisanLabel = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.satisAliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showEmployees = new System.Windows.Forms.RadioButton();
-            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.newItemButton = new FontAwesome.Sharp.IconButton();
+            this.addItemLabel = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.satisAliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.satisAlisGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satisAliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.satisAliBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // satisAlisGrid
@@ -69,8 +71,8 @@
             // 
             this.selectQueryComboBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.selectQueryComboBox.Items.AddRange(new object[] {
-            "Seçilen ürünün kar-zarar durumunu raporla",
-            "Toplam kar-zarar durumunu raporla"});
+            "Profit made or money lost on the selected item",
+            "Total profit or lost money on all items"});
             this.selectQueryComboBox.Location = new System.Drawing.Point(12, 257);
             this.selectQueryComboBox.Name = "selectQueryComboBox";
             this.selectQueryComboBox.Size = new System.Drawing.Size(351, 26);
@@ -86,7 +88,7 @@
             this.queryResultTextBox.Name = "queryResultTextBox";
             this.queryResultTextBox.Size = new System.Drawing.Size(540, 220);
             this.queryResultTextBox.TabIndex = 3;
-            this.queryResultTextBox.Text = "Query sonuçları burada listelenecek";
+            this.queryResultTextBox.Text = "Query results will be listed here";
             // 
             // showButton
             // 
@@ -125,37 +127,15 @@
             this.yaniCalisanLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yaniCalisanLabel.Location = new System.Drawing.Point(848, 481);
             this.yaniCalisanLabel.Name = "yaniCalisanLabel";
-            this.yaniCalisanLabel.Size = new System.Drawing.Size(134, 18);
+            this.yaniCalisanLabel.Size = new System.Drawing.Size(111, 18);
             this.yaniCalisanLabel.TabIndex = 6;
-            this.yaniCalisanLabel.Text = "Yeni Çalışan Ekle";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Urun_Adi";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Urun_Adi";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Satis";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Satis";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Alis";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Alis";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // satisAliBindingSource
-            // 
-            this.satisAliBindingSource.DataSource = typeof(WindowsProg.SatisAli);
+            this.yaniCalisanLabel.Text = "Add New User";
             // 
             // showEmployees
             // 
             this.showEmployees.AutoSize = true;
             this.showEmployees.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.showEmployees.Location = new System.Drawing.Point(703, 521);
+            this.showEmployees.Location = new System.Drawing.Point(851, 559);
             this.showEmployees.Name = "showEmployees";
             this.showEmployees.Size = new System.Drawing.Size(106, 22);
             this.showEmployees.TabIndex = 7;
@@ -163,10 +143,6 @@
             this.showEmployees.Text = "Show Users";
             this.showEmployees.UseVisualStyleBackColor = true;
             this.showEmployees.CheckedChanged += new System.EventHandler(this.showEmployees_CheckedChanged);
-            // 
-            // tableBindingSource
-            // 
-            this.tableBindingSource.DataSource = typeof(WindowsProg.Table);
             // 
             // usersDataGridView
             // 
@@ -177,11 +153,37 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7});
             this.usersDataGridView.DataSource = this.tableBindingSource;
-            this.usersDataGridView.Location = new System.Drawing.Point(352, 418);
+            this.usersDataGridView.Location = new System.Drawing.Point(18, 323);
             this.usersDataGridView.Name = "usersDataGridView";
             this.usersDataGridView.Size = new System.Drawing.Size(345, 220);
             this.usersDataGridView.TabIndex = 7;
             this.usersDataGridView.Visible = false;
+            // 
+            // newItemButton
+            // 
+            this.newItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newItemButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.newItemButton.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.newItemButton.IconColor = System.Drawing.Color.Black;
+            this.newItemButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.newItemButton.IconSize = 36;
+            this.newItemButton.Location = new System.Drawing.Point(689, 511);
+            this.newItemButton.Name = "newItemButton";
+            this.newItemButton.Size = new System.Drawing.Size(98, 42);
+            this.newItemButton.TabIndex = 8;
+            this.newItemButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.newItemButton.UseVisualStyleBackColor = true;
+            this.newItemButton.Click += new System.EventHandler(this.newItemButton_Click);
+            // 
+            // addItemLabel
+            // 
+            this.addItemLabel.AutoSize = true;
+            this.addItemLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addItemLabel.Location = new System.Drawing.Point(686, 481);
+            this.addItemLabel.Name = "addItemLabel";
+            this.addItemLabel.Size = new System.Drawing.Size(112, 18);
+            this.addItemLabel.TabIndex = 9;
+            this.addItemLabel.Text = "Add New Item";
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -203,12 +205,40 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Position";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataSource = typeof(WindowsProg.Table);
+            // 
+            // satisAliBindingSource
+            // 
+            this.satisAliBindingSource.DataSource = typeof(WindowsProg.SatisAli);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Urun_Adi";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ProcutName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Satis";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Gained";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Alis";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Spent";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // Ayarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1002, 675);
+            this.Controls.Add(this.addItemLabel);
+            this.Controls.Add(this.newItemButton);
             this.Controls.Add(this.usersDataGridView);
             this.Controls.Add(this.showEmployees);
             this.Controls.Add(this.yaniCalisanLabel);
@@ -222,9 +252,9 @@
             this.Text = "Ayarlar";
             this.Load += new System.EventHandler(this.Ayarlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.satisAlisGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satisAliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.satisAliBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,9 +264,6 @@
 
         private System.Windows.Forms.BindingSource satisAliBindingSource;
         private System.Windows.Forms.DataGridView satisAlisGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.ComboBox selectQueryComboBox;
         private System.Windows.Forms.TextBox queryResultTextBox;
         private FontAwesome.Sharp.IconButton showButton;
@@ -248,5 +275,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private FontAwesome.Sharp.IconButton newItemButton;
+        private System.Windows.Forms.Label addItemLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

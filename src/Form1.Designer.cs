@@ -37,7 +37,11 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timeLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.exitButton = new FontAwesome.Sharp.IconButton();
+            this.minimizeButton = new FontAwesome.Sharp.IconButton();
             this.textGroup.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textGroup
@@ -125,21 +129,67 @@
             this.timeLabel.Size = new System.Drawing.Size(0, 18);
             this.timeLabel.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.panel1.Controls.Add(this.exitButton);
+            this.panel1.Controls.Add(this.minimizeButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(464, 45);
+            this.panel1.TabIndex = 5;
+            // 
+            // exitButton
+            // 
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.exitButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.exitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exitButton.IconSize = 36;
+            this.exitButton.Location = new System.Drawing.Point(438, 0);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(24, 23);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.minimizeButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.minimizeButton.IconSize = 36;
+            this.minimizeButton.Location = new System.Drawing.Point(408, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(24, 23);
+            this.minimizeButton.TabIndex = 0;
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
             // loginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(464, 461);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.textGroup);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.loginPage_Load);
             this.textGroup.ResumeLayout(false);
             this.textGroup.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +205,9 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton exitButton;
+        private FontAwesome.Sharp.IconButton minimizeButton;
     }
 }
 

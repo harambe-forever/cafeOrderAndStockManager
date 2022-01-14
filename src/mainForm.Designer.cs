@@ -79,7 +79,7 @@
             this.settingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.settingsButton.Size = new System.Drawing.Size(171, 69);
             this.settingsButton.TabIndex = 5;
-            this.settingsButton.Text = "Ayarlar";
+            this.settingsButton.Text = "Settings";
             this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
@@ -101,7 +101,7 @@
             this.inventoryButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.inventoryButton.Size = new System.Drawing.Size(171, 69);
             this.inventoryButton.TabIndex = 3;
-            this.inventoryButton.Text = "Envanter";
+            this.inventoryButton.Text = "Inventory";
             this.inventoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.inventoryButton.UseVisualStyleBackColor = true;
             this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
@@ -123,7 +123,7 @@
             this.tablesButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.tablesButton.Size = new System.Drawing.Size(171, 69);
             this.tablesButton.TabIndex = 2;
-            this.tablesButton.Text = "Masalar";
+            this.tablesButton.Text = "Tables";
             this.tablesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.tablesButton.UseVisualStyleBackColor = true;
             this.tablesButton.Click += new System.EventHandler(this.tablesButton_Click);
@@ -145,7 +145,7 @@
             this.placeOrderButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.placeOrderButton.Size = new System.Drawing.Size(171, 69);
             this.placeOrderButton.TabIndex = 1;
-            this.placeOrderButton.Text = "Siparis";
+            this.placeOrderButton.Text = "Order";
             this.placeOrderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.placeOrderButton.UseVisualStyleBackColor = true;
             this.placeOrderButton.Click += new System.EventHandler(this.placeOrderButton_Click_1);
@@ -209,9 +209,9 @@
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblTitleChildForm.Location = new System.Drawing.Point(44, 16);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(75, 16);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(44, 16);
             this.lblTitleChildForm.TabIndex = 3;
-            this.lblTitleChildForm.Text = "Ana Sayfa";
+            this.lblTitleChildForm.Text = "Home";
             // 
             // exitButton
             // 

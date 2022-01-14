@@ -110,7 +110,7 @@ namespace WindowsProg
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
-            lblTitleChildForm.Text = "Ana Sayfa";
+            lblTitleChildForm.Text = "Home";
         }
 
         private void minimizeButton_Click_1(object sender, EventArgs e)
