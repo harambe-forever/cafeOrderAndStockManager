@@ -179,23 +179,6 @@ namespace WindowsProg
             }
 
             satisUpdate(foodNameTextBox, priceTextBox, Quantity);
-            /*if(Quantity.Value > 0)
-            {
-                var qry1 = dbSatisAlis.SatisAlis.Where(x => x.Urun_Adi == foodNameTextBox.Text).FirstOrDefault();
-                if(qry1 != null)
-                {
-                    qry1.Satis += Int16.Parse(priceTextBox.Text);
-                }
-                else
-                {
-                    dbSatisAlis.SatisAlis.Add(new SatisAli()
-                    {
-                        Urun_Adi = foodNameTextBox.Text,
-                        Satis = Int16.Parse(priceTextBox.Text),
-                        Alis = null
-                    });
-                }
-            }*/
 
             var query2 = from drinkOrder in dbcontext.Products
                          where drinkOrder.ProductName == drinkNameTextBox.Text
@@ -238,27 +221,27 @@ namespace WindowsProg
             }
         }
 
-        private void findAndReport()
-        {
-
-        }
-
         private void saveTableButton_Click(object sender, EventArgs e)
         {
             stockUpdate();
 
             var checkedButton = tableGroupBox.Controls.OfType<RadioButton>()
                                       .FirstOrDefault(r => r.Checked);
-
-            string tableID = checkedButton.Text;
-
-            var query4 = from masaData in dbMasalar.CafeTables
-                         where masaData.tableID == tableID
-                         select masaData;
-
-            foreach (CafeTable tab in query4)
+            if(checkedButton == null)
             {
-                tab.table_total += (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
+                MessageBox.Show("Ooops, Please Choose a Table!");
+            }
+            else
+            {
+                string tableID = checkedButton.Text;
+                var query4 = from masaData in dbMasalar.CafeTables
+                             where masaData.tableID == tableID
+                             select masaData;
+
+                foreach (CafeTable tab in query4)
+                {
+                    tab.table_total += (Int16.Parse(priceTextBox.Text) + Int16.Parse(drinkPriceTextBox.Text) + Int16.Parse(dessertPriceTextBox.Text));
+                }
             }
 
             dbMasalar.SaveChanges();
