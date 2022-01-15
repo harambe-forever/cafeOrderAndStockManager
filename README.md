@@ -53,4 +53,20 @@ You can clearly see the increment in the quantity of your ordered items.
 
 Settings:
 
+![ayarlar6](https://user-images.githubusercontent.com/71318378/149620999-ca8d71eb-c7cd-4d1a-89e7-4f8f1ead8ed6.png)
 
+You can make reports about your ordered and supplied items easily
+
+
+![ayarlar2](https://user-images.githubusercontent.com/71318378/149621014-2f646471-d324-452e-b505-f9e0eaec01e9.png)
+
+
+![ayarlar3](https://user-images.githubusercontent.com/71318378/149621018-648247aa-d46b-4f6e-8c8d-7eddae7eb1f9.png)
+
+You can also add new users and items
+
+
+![ayarlar4](https://user-images.githubusercontent.com/71318378/149621031-1e6a46a5-775e-45ec-b60a-1a680aa3fcce.png)
+
+
+![ayarlar5](https://user-images.githubusercontent.com/71318378/149621033-4137483d-a130-4dce-8727-bfe11437047a.png)
