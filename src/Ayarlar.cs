@@ -138,5 +138,11 @@ namespace WindowsProg
             AddItemForm newItem = new AddItemForm();
             newItem.Show();
         }
+
+        private void removeItemButton_Click(object sender, EventArgs e)
+        {
+            removeItemForm removeItem = new removeItemForm();
+            removeItem.Show();
+        }
     }
 }

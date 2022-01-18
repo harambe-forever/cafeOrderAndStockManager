@@ -50,7 +50,6 @@ namespace WindowsProg
             }
             /*mainForm mainF = new mainForm();
             mainF.Show();*/
-            this.Hide();
         }
 
         private bool isValidUser(string userName, string password)

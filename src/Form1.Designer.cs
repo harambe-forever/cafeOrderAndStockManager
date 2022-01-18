@@ -51,9 +51,11 @@
             this.textGroup.Controls.Add(this.idLabel);
             this.textGroup.Controls.Add(this.passwordTextBox);
             this.textGroup.Controls.Add(this.idTextBox);
-            this.textGroup.Location = new System.Drawing.Point(12, 94);
+            this.textGroup.Location = new System.Drawing.Point(18, 145);
+            this.textGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textGroup.Name = "textGroup";
-            this.textGroup.Size = new System.Drawing.Size(440, 146);
+            this.textGroup.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textGroup.Size = new System.Drawing.Size(660, 225);
             this.textGroup.TabIndex = 0;
             this.textGroup.TabStop = false;
             // 
@@ -62,9 +64,10 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.passwordLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.passwordLabel.Location = new System.Drawing.Point(13, 95);
+            this.passwordLabel.Location = new System.Drawing.Point(20, 146);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(79, 18);
+            this.passwordLabel.Size = new System.Drawing.Size(121, 27);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "Password:";
             // 
@@ -73,9 +76,10 @@
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.idLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.idLabel.Location = new System.Drawing.Point(12, 48);
+            this.idLabel.Location = new System.Drawing.Point(18, 74);
+            this.idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(86, 18);
+            this.idLabel.Size = new System.Drawing.Size(131, 27);
             this.idLabel.TabIndex = 2;
             this.idLabel.Text = "Username:";
             // 
@@ -85,10 +89,11 @@
             this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.passwordTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.passwordTextBox.Location = new System.Drawing.Point(98, 90);
+            this.passwordTextBox.Location = new System.Drawing.Point(166, 146);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordTextBox.Multiline = true;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(230, 30);
+            this.passwordTextBox.Size = new System.Drawing.Size(345, 46);
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTextBox_KeyDown);
             // 
@@ -98,19 +103,21 @@
             this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.idTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.idTextBox.Location = new System.Drawing.Point(98, 43);
+            this.idTextBox.Location = new System.Drawing.Point(166, 66);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.idTextBox.Multiline = true;
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(230, 30);
+            this.idTextBox.Size = new System.Drawing.Size(345, 46);
             this.idTextBox.TabIndex = 0;
             // 
             // loginButton
             // 
             this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.loginButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.loginButton.Location = new System.Drawing.Point(185, 246);
+            this.loginButton.Location = new System.Drawing.Point(278, 378);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(155, 60);
+            this.loginButton.Size = new System.Drawing.Size(232, 92);
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -124,9 +131,10 @@
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.timeLabel.Location = new System.Drawing.Point(13, 47);
+            this.timeLabel.Location = new System.Drawing.Point(20, 72);
+            this.timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(0, 18);
+            this.timeLabel.Size = new System.Drawing.Size(0, 27);
             this.timeLabel.TabIndex = 2;
             // 
             // panel1
@@ -136,8 +144,9 @@
             this.panel1.Controls.Add(this.minimizeButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 45);
+            this.panel1.Size = new System.Drawing.Size(696, 69);
             this.panel1.TabIndex = 5;
             // 
             // exitButton
@@ -149,9 +158,10 @@
             this.exitButton.IconColor = System.Drawing.Color.Gainsboro;
             this.exitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.exitButton.IconSize = 36;
-            this.exitButton.Location = new System.Drawing.Point(438, 0);
+            this.exitButton.Location = new System.Drawing.Point(657, 0);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(24, 23);
+            this.exitButton.Size = new System.Drawing.Size(36, 35);
             this.exitButton.TabIndex = 2;
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
@@ -165,24 +175,26 @@
             this.minimizeButton.IconColor = System.Drawing.Color.Gainsboro;
             this.minimizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.minimizeButton.IconSize = 36;
-            this.minimizeButton.Location = new System.Drawing.Point(408, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(612, 0);
+            this.minimizeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(24, 23);
+            this.minimizeButton.Size = new System.Drawing.Size(36, 35);
             this.minimizeButton.TabIndex = 0;
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // loginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(213)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(464, 461);
+            this.ClientSize = new System.Drawing.Size(696, 709);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.textGroup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "loginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

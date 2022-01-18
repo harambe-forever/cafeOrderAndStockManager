@@ -138,8 +138,8 @@ namespace WindowsProg
                 Cost = cost
             });
             dbDelivery.SaveChanges();
-            deliveryGrid.Refresh();
-            this.Refresh();         
+            deliveryLoad();
+            this.Refresh();
         }
 
 

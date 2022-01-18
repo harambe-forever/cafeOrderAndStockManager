@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.userDataDataSet = new WindowsProg.UserDataDataSet();
             this.foodGrid = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.drinkGrid = new System.Windows.Forms.DataGridView();
             this.dessertGrid = new System.Windows.Forms.DataGridView();
             this.foodGroupBox = new System.Windows.Forms.GroupBox();
@@ -58,18 +57,18 @@
             this.table1RadioButton = new System.Windows.Forms.RadioButton();
             this.payButton = new FontAwesome.Sharp.IconButton();
             this.saveTableButton = new FontAwesome.Sharp.IconButton();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).BeginInit();
             this.foodGroupBox.SuspendLayout();
@@ -80,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dessertQuantity)).BeginInit();
             this.tableOrTakeawayGroupBox.SuspendLayout();
             this.tableGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // userDataDataSet
@@ -96,15 +96,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.foodGrid.DataSource = this.productBindingSource;
-            this.foodGrid.Location = new System.Drawing.Point(12, 12);
+            this.foodGrid.Location = new System.Drawing.Point(18, 18);
+            this.foodGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.foodGrid.Name = "foodGrid";
-            this.foodGrid.Size = new System.Drawing.Size(320, 170);
+            this.foodGrid.ReadOnly = true;
+            this.foodGrid.RowHeadersWidth = 62;
+            this.foodGrid.Size = new System.Drawing.Size(480, 262);
             this.foodGrid.TabIndex = 0;
             this.foodGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodGrid_CellClick);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
             // 
             // drinkGrid
             // 
@@ -115,9 +114,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.drinkGrid.DataSource = this.productBindingSource;
-            this.drinkGrid.Location = new System.Drawing.Point(338, 12);
+            this.drinkGrid.Location = new System.Drawing.Point(507, 18);
+            this.drinkGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinkGrid.Name = "drinkGrid";
-            this.drinkGrid.Size = new System.Drawing.Size(320, 170);
+            this.drinkGrid.RowHeadersWidth = 62;
+            this.drinkGrid.Size = new System.Drawing.Size(480, 262);
             this.drinkGrid.TabIndex = 1;
             this.drinkGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drinkGrid_CellClick);
             // 
@@ -130,9 +131,11 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.dessertGrid.DataSource = this.productBindingSource;
-            this.dessertGrid.Location = new System.Drawing.Point(664, 12);
+            this.dessertGrid.Location = new System.Drawing.Point(996, 18);
+            this.dessertGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dessertGrid.Name = "dessertGrid";
-            this.dessertGrid.Size = new System.Drawing.Size(320, 170);
+            this.dessertGrid.RowHeadersWidth = 62;
+            this.dessertGrid.Size = new System.Drawing.Size(480, 262);
             this.dessertGrid.TabIndex = 2;
             this.dessertGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dessertGrid_CellClick);
             // 
@@ -141,18 +144,21 @@
             this.foodGroupBox.Controls.Add(this.Quantity);
             this.foodGroupBox.Controls.Add(this.priceTextBox);
             this.foodGroupBox.Controls.Add(this.foodNameTextBox);
-            this.foodGroupBox.Location = new System.Drawing.Point(13, 189);
+            this.foodGroupBox.Location = new System.Drawing.Point(20, 291);
+            this.foodGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.foodGroupBox.Name = "foodGroupBox";
-            this.foodGroupBox.Size = new System.Drawing.Size(319, 182);
+            this.foodGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.foodGroupBox.Size = new System.Drawing.Size(478, 280);
             this.foodGroupBox.TabIndex = 3;
             this.foodGroupBox.TabStop = false;
             this.foodGroupBox.Text = "Food";
             // 
             // Quantity
             // 
-            this.Quantity.Location = new System.Drawing.Point(218, 19);
+            this.Quantity.Location = new System.Drawing.Point(327, 29);
+            this.Quantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Quantity.Name = "Quantity";
-            this.Quantity.Size = new System.Drawing.Size(94, 20);
+            this.Quantity.Size = new System.Drawing.Size(141, 26);
             this.Quantity.TabIndex = 2;
             this.Quantity.Value = new decimal(new int[] {
             1,
@@ -165,10 +171,11 @@
             // 
             this.priceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.priceTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.priceTextBox.Location = new System.Drawing.Point(112, 19);
+            this.priceTextBox.Location = new System.Drawing.Point(168, 29);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.priceTextBox.Multiline = true;
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(100, 157);
+            this.priceTextBox.Size = new System.Drawing.Size(148, 239);
             this.priceTextBox.TabIndex = 1;
             this.priceTextBox.Text = "0";
             // 
@@ -176,10 +183,11 @@
             // 
             this.foodNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.foodNameTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.foodNameTextBox.Location = new System.Drawing.Point(6, 19);
+            this.foodNameTextBox.Location = new System.Drawing.Point(9, 29);
+            this.foodNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.foodNameTextBox.Multiline = true;
             this.foodNameTextBox.Name = "foodNameTextBox";
-            this.foodNameTextBox.Size = new System.Drawing.Size(100, 157);
+            this.foodNameTextBox.Size = new System.Drawing.Size(148, 239);
             this.foodNameTextBox.TabIndex = 0;
             // 
             // drinkGroupBox
@@ -187,18 +195,21 @@
             this.drinkGroupBox.Controls.Add(this.drinkQuantity);
             this.drinkGroupBox.Controls.Add(this.drinkPriceTextBox);
             this.drinkGroupBox.Controls.Add(this.drinkNameTextBox);
-            this.drinkGroupBox.Location = new System.Drawing.Point(339, 189);
+            this.drinkGroupBox.Location = new System.Drawing.Point(508, 291);
+            this.drinkGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinkGroupBox.Name = "drinkGroupBox";
-            this.drinkGroupBox.Size = new System.Drawing.Size(319, 182);
+            this.drinkGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.drinkGroupBox.Size = new System.Drawing.Size(478, 280);
             this.drinkGroupBox.TabIndex = 4;
             this.drinkGroupBox.TabStop = false;
             this.drinkGroupBox.Text = "Drink";
             // 
             // drinkQuantity
             // 
-            this.drinkQuantity.Location = new System.Drawing.Point(218, 19);
+            this.drinkQuantity.Location = new System.Drawing.Point(327, 29);
+            this.drinkQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinkQuantity.Name = "drinkQuantity";
-            this.drinkQuantity.Size = new System.Drawing.Size(94, 20);
+            this.drinkQuantity.Size = new System.Drawing.Size(141, 26);
             this.drinkQuantity.TabIndex = 2;
             this.drinkQuantity.Value = new decimal(new int[] {
             1,
@@ -211,10 +222,11 @@
             // 
             this.drinkPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.drinkPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.drinkPriceTextBox.Location = new System.Drawing.Point(112, 19);
+            this.drinkPriceTextBox.Location = new System.Drawing.Point(168, 29);
+            this.drinkPriceTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinkPriceTextBox.Multiline = true;
             this.drinkPriceTextBox.Name = "drinkPriceTextBox";
-            this.drinkPriceTextBox.Size = new System.Drawing.Size(100, 157);
+            this.drinkPriceTextBox.Size = new System.Drawing.Size(148, 239);
             this.drinkPriceTextBox.TabIndex = 1;
             this.drinkPriceTextBox.Text = "0";
             // 
@@ -222,10 +234,11 @@
             // 
             this.drinkNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.drinkNameTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.drinkNameTextBox.Location = new System.Drawing.Point(6, 19);
+            this.drinkNameTextBox.Location = new System.Drawing.Point(9, 29);
+            this.drinkNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinkNameTextBox.Multiline = true;
             this.drinkNameTextBox.Name = "drinkNameTextBox";
-            this.drinkNameTextBox.Size = new System.Drawing.Size(100, 157);
+            this.drinkNameTextBox.Size = new System.Drawing.Size(148, 239);
             this.drinkNameTextBox.TabIndex = 0;
             // 
             // dessertGroupBox
@@ -233,18 +246,21 @@
             this.dessertGroupBox.Controls.Add(this.dessertQuantity);
             this.dessertGroupBox.Controls.Add(this.dessertPriceTextBox);
             this.dessertGroupBox.Controls.Add(this.dessertNameTextBox);
-            this.dessertGroupBox.Location = new System.Drawing.Point(665, 183);
+            this.dessertGroupBox.Location = new System.Drawing.Point(998, 282);
+            this.dessertGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dessertGroupBox.Name = "dessertGroupBox";
-            this.dessertGroupBox.Size = new System.Drawing.Size(319, 182);
+            this.dessertGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dessertGroupBox.Size = new System.Drawing.Size(478, 280);
             this.dessertGroupBox.TabIndex = 5;
             this.dessertGroupBox.TabStop = false;
             this.dessertGroupBox.Text = "Dessert";
             // 
             // dessertQuantity
             // 
-            this.dessertQuantity.Location = new System.Drawing.Point(218, 19);
+            this.dessertQuantity.Location = new System.Drawing.Point(327, 29);
+            this.dessertQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dessertQuantity.Name = "dessertQuantity";
-            this.dessertQuantity.Size = new System.Drawing.Size(94, 20);
+            this.dessertQuantity.Size = new System.Drawing.Size(141, 26);
             this.dessertQuantity.TabIndex = 2;
             this.dessertQuantity.Value = new decimal(new int[] {
             1,
@@ -257,10 +273,11 @@
             // 
             this.dessertPriceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.dessertPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dessertPriceTextBox.Location = new System.Drawing.Point(112, 19);
+            this.dessertPriceTextBox.Location = new System.Drawing.Point(168, 29);
+            this.dessertPriceTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dessertPriceTextBox.Multiline = true;
             this.dessertPriceTextBox.Name = "dessertPriceTextBox";
-            this.dessertPriceTextBox.Size = new System.Drawing.Size(100, 157);
+            this.dessertPriceTextBox.Size = new System.Drawing.Size(148, 239);
             this.dessertPriceTextBox.TabIndex = 1;
             this.dessertPriceTextBox.Text = "0";
             // 
@@ -268,19 +285,22 @@
             // 
             this.dessertNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.dessertNameTextBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dessertNameTextBox.Location = new System.Drawing.Point(6, 19);
+            this.dessertNameTextBox.Location = new System.Drawing.Point(9, 29);
+            this.dessertNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dessertNameTextBox.Multiline = true;
             this.dessertNameTextBox.Name = "dessertNameTextBox";
-            this.dessertNameTextBox.Size = new System.Drawing.Size(100, 157);
+            this.dessertNameTextBox.Size = new System.Drawing.Size(148, 239);
             this.dessertNameTextBox.TabIndex = 0;
             // 
             // tableOrTakeawayGroupBox
             // 
             this.tableOrTakeawayGroupBox.Controls.Add(this.takeawayRadioButton);
             this.tableOrTakeawayGroupBox.Controls.Add(this.toTableRadioButton);
-            this.tableOrTakeawayGroupBox.Location = new System.Drawing.Point(19, 408);
+            this.tableOrTakeawayGroupBox.Location = new System.Drawing.Point(28, 628);
+            this.tableOrTakeawayGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableOrTakeawayGroupBox.Name = "tableOrTakeawayGroupBox";
-            this.tableOrTakeawayGroupBox.Size = new System.Drawing.Size(313, 132);
+            this.tableOrTakeawayGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableOrTakeawayGroupBox.Size = new System.Drawing.Size(470, 203);
             this.tableOrTakeawayGroupBox.TabIndex = 6;
             this.tableOrTakeawayGroupBox.TabStop = false;
             this.tableOrTakeawayGroupBox.Text = "Table or Takeaway";
@@ -289,9 +309,10 @@
             // 
             this.takeawayRadioButton.AutoSize = true;
             this.takeawayRadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.takeawayRadioButton.Location = new System.Drawing.Point(6, 48);
+            this.takeawayRadioButton.Location = new System.Drawing.Point(9, 74);
+            this.takeawayRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.takeawayRadioButton.Name = "takeawayRadioButton";
-            this.takeawayRadioButton.Size = new System.Drawing.Size(102, 22);
+            this.takeawayRadioButton.Size = new System.Drawing.Size(151, 31);
             this.takeawayRadioButton.TabIndex = 1;
             this.takeawayRadioButton.TabStop = true;
             this.takeawayRadioButton.Text = "Takeaway";
@@ -302,9 +323,10 @@
             // 
             this.toTableRadioButton.AutoSize = true;
             this.toTableRadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.toTableRadioButton.Location = new System.Drawing.Point(7, 20);
+            this.toTableRadioButton.Location = new System.Drawing.Point(10, 31);
+            this.toTableRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.toTableRadioButton.Name = "toTableRadioButton";
-            this.toTableRadioButton.Size = new System.Drawing.Size(86, 22);
+            this.toTableRadioButton.Size = new System.Drawing.Size(129, 31);
             this.toTableRadioButton.TabIndex = 0;
             this.toTableRadioButton.TabStop = true;
             this.toTableRadioButton.Text = "To Table";
@@ -319,9 +341,11 @@
             this.tableGroupBox.Controls.Add(this.table3RadioButton);
             this.tableGroupBox.Controls.Add(this.table2RadioButton);
             this.tableGroupBox.Controls.Add(this.table1RadioButton);
-            this.tableGroupBox.Location = new System.Drawing.Point(338, 408);
+            this.tableGroupBox.Location = new System.Drawing.Point(507, 628);
+            this.tableGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableGroupBox.Name = "tableGroupBox";
-            this.tableGroupBox.Size = new System.Drawing.Size(313, 132);
+            this.tableGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableGroupBox.Size = new System.Drawing.Size(470, 203);
             this.tableGroupBox.TabIndex = 7;
             this.tableGroupBox.TabStop = false;
             this.tableGroupBox.Text = "Tables";
@@ -331,9 +355,10 @@
             // 
             this.table6RadioButton.AutoSize = true;
             this.table6RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table6RadioButton.Location = new System.Drawing.Point(113, 80);
+            this.table6RadioButton.Location = new System.Drawing.Point(170, 123);
+            this.table6RadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table6RadioButton.Name = "table6RadioButton";
-            this.table6RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table6RadioButton.Size = new System.Drawing.Size(117, 31);
             this.table6RadioButton.TabIndex = 5;
             this.table6RadioButton.TabStop = true;
             this.table6RadioButton.Text = "Table 6";
@@ -343,9 +368,10 @@
             // 
             this.table5RadioButton.AutoSize = true;
             this.table5RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table5RadioButton.Location = new System.Drawing.Point(113, 52);
+            this.table5RadioButton.Location = new System.Drawing.Point(170, 80);
+            this.table5RadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table5RadioButton.Name = "table5RadioButton";
-            this.table5RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table5RadioButton.Size = new System.Drawing.Size(117, 31);
             this.table5RadioButton.TabIndex = 4;
             this.table5RadioButton.TabStop = true;
             this.table5RadioButton.Text = "Table 5";
@@ -355,9 +381,10 @@
             // 
             this.table4RadioButton.AutoSize = true;
             this.table4RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table4RadioButton.Location = new System.Drawing.Point(113, 24);
+            this.table4RadioButton.Location = new System.Drawing.Point(170, 37);
+            this.table4RadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table4RadioButton.Name = "table4RadioButton";
-            this.table4RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table4RadioButton.Size = new System.Drawing.Size(117, 31);
             this.table4RadioButton.TabIndex = 3;
             this.table4RadioButton.TabStop = true;
             this.table4RadioButton.Text = "Table 4";
@@ -367,9 +394,10 @@
             // 
             this.table3RadioButton.AutoSize = true;
             this.table3RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table3RadioButton.Location = new System.Drawing.Point(6, 80);
+            this.table3RadioButton.Location = new System.Drawing.Point(9, 123);
+            this.table3RadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table3RadioButton.Name = "table3RadioButton";
-            this.table3RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table3RadioButton.Size = new System.Drawing.Size(117, 31);
             this.table3RadioButton.TabIndex = 2;
             this.table3RadioButton.TabStop = true;
             this.table3RadioButton.Text = "Table 3";
@@ -379,9 +407,10 @@
             // 
             this.table2RadioButton.AutoSize = true;
             this.table2RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table2RadioButton.Location = new System.Drawing.Point(7, 52);
+            this.table2RadioButton.Location = new System.Drawing.Point(10, 80);
+            this.table2RadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table2RadioButton.Name = "table2RadioButton";
-            this.table2RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table2RadioButton.Size = new System.Drawing.Size(117, 31);
             this.table2RadioButton.TabIndex = 1;
             this.table2RadioButton.TabStop = true;
             this.table2RadioButton.Text = "Table 2";
@@ -391,9 +420,10 @@
             // 
             this.table1RadioButton.AutoSize = true;
             this.table1RadioButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.table1RadioButton.Location = new System.Drawing.Point(7, 24);
+            this.table1RadioButton.Location = new System.Drawing.Point(10, 37);
+            this.table1RadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.table1RadioButton.Name = "table1RadioButton";
-            this.table1RadioButton.Size = new System.Drawing.Size(78, 22);
+            this.table1RadioButton.Size = new System.Drawing.Size(117, 31);
             this.table1RadioButton.TabIndex = 0;
             this.table1RadioButton.TabStop = true;
             this.table1RadioButton.Text = "Table 1";
@@ -406,9 +436,10 @@
             this.payButton.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
             this.payButton.IconColor = System.Drawing.Color.Violet;
             this.payButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.payButton.Location = new System.Drawing.Point(883, 408);
+            this.payButton.Location = new System.Drawing.Point(1324, 628);
+            this.payButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.payButton.Name = "payButton";
-            this.payButton.Size = new System.Drawing.Size(101, 102);
+            this.payButton.Size = new System.Drawing.Size(152, 157);
             this.payButton.TabIndex = 8;
             this.payButton.Text = "Pay";
             this.payButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -422,9 +453,10 @@
             this.saveTableButton.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
             this.saveTableButton.IconColor = System.Drawing.Color.Violet;
             this.saveTableButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.saveTableButton.Location = new System.Drawing.Point(671, 408);
+            this.saveTableButton.Location = new System.Drawing.Point(1006, 628);
+            this.saveTableButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveTableButton.Name = "saveTableButton";
-            this.saveTableButton.Size = new System.Drawing.Size(101, 102);
+            this.saveTableButton.Size = new System.Drawing.Size(152, 157);
             this.saveTableButton.TabIndex = 9;
             this.saveTableButton.Text = "Save Table";
             this.saveTableButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -432,52 +464,11 @@
             this.saveTableButton.Visible = false;
             this.saveTableButton.Click += new System.EventHandler(this.saveTableButton_Click);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn3.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PricePerUnit";
-            this.dataGridViewTextBoxColumn4.HeaderText = "PricePerUnit";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "inStock";
-            this.dataGridViewTextBoxColumn5.HeaderText = "inStock";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PricePerUnit";
-            this.dataGridViewTextBoxColumn6.HeaderText = "PricePerUnit";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 75;
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ProductName";
             this.dataGridViewTextBoxColumn7.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 150;
             // 
@@ -485,6 +476,7 @@
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "inStock";
             this.dataGridViewTextBoxColumn8.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 50;
             // 
@@ -492,15 +484,71 @@
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "PricePerUnit";
             this.dataGridViewTextBoxColumn9.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 75;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(WindowsProg.Product);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn5.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn6.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ProductName";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "inStock";
+            this.dataGridViewTextBoxColumn3.HeaderText = "inStock";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PricePerUnit";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PricePerUnit";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 75;
+            // 
             // Siparis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1064, 576);
+            this.ClientSize = new System.Drawing.Size(1596, 886);
             this.Controls.Add(this.saveTableButton);
             this.Controls.Add(this.payButton);
             this.Controls.Add(this.tableGroupBox);
@@ -512,12 +560,12 @@
             this.Controls.Add(this.drinkGrid);
             this.Controls.Add(this.foodGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Siparis";
             this.Text = "Siparis";
             this.Load += new System.EventHandler(this.Siparis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dessertGrid)).EndInit();
             this.foodGroupBox.ResumeLayout(false);
@@ -533,6 +581,7 @@
             this.tableOrTakeawayGroupBox.PerformLayout();
             this.tableGroupBox.ResumeLayout(false);
             this.tableGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -223,7 +223,6 @@ namespace WindowsProg
 
         private void saveTableButton_Click(object sender, EventArgs e)
         {
-            stockUpdate();
 
             var checkedButton = tableGroupBox.Controls.OfType<RadioButton>()
                                       .FirstOrDefault(r => r.Checked);
@@ -233,6 +232,7 @@ namespace WindowsProg
             }
             else
             {
+                stockUpdate();
                 string tableID = checkedButton.Text;
                 var query4 = from masaData in dbMasalar.CafeTables
                              where masaData.tableID == tableID
