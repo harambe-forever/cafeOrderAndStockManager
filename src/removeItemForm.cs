@@ -54,6 +54,7 @@ namespace WindowsProg
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Item Removed Successfully!");
             removeItems();
         }
     }
