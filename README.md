@@ -53,20 +53,33 @@ You can clearly see the increment in the quantity of your ordered items.
 
 Settings:
 
-![ayarlar6](https://user-images.githubusercontent.com/71318378/149620999-ca8d71eb-c7cd-4d1a-89e7-4f8f1ead8ed6.png)
+![resim](https://user-images.githubusercontent.com/71318378/152676913-dbdde3dd-6975-474e-8a58-a7f5a32643b1.png)
+
 
 You can make reports about your ordered and supplied items easily
 
-
-![ayarlar2](https://user-images.githubusercontent.com/71318378/149621014-2f646471-d324-452e-b505-f9e0eaec01e9.png)
+![resim](https://user-images.githubusercontent.com/71318378/152676934-96c1f9ca-5032-4c0b-98e8-07a3083e6f72.png)
 
 
 ![ayarlar3](https://user-images.githubusercontent.com/71318378/149621018-648247aa-d46b-4f6e-8c8d-7eddae7eb1f9.png)
 
 You can also add new users and items
 
+![resim](https://user-images.githubusercontent.com/71318378/152676958-37e399cb-4cc1-4cd9-9827-2f7162f1b4ce.png)
 
-![ayarlar4](https://user-images.githubusercontent.com/71318378/149621031-1e6a46a5-775e-45ec-b60a-1a680aa3fcce.png)
+You need order added item in order to serve it in your menu 
 
+![resim](https://user-images.githubusercontent.com/71318378/152676978-ef9d94ce-9464-429c-bc2c-3de23eb6568a.png)
 
-![ayarlar5](https://user-images.githubusercontent.com/71318378/149621033-4137483d-a130-4dce-8727-bfe11437047a.png)
+AFter your order is delivered, you can serve it
+
+![resim](https://user-images.githubusercontent.com/71318378/152677001-41324706-61f0-446b-b420-68f620e93dda.png)
+
+You can remove unwanted items from your menu as well
+
+![resim](https://user-images.githubusercontent.com/71318378/152677015-51deeba9-8b72-42ea-8f96-88c7c3fc3817.png)
+
+And last but not least, you can add or remove users from your database
+
+![resim](https://user-images.githubusercontent.com/71318378/152677056-66671ddb-f205-487e-9ccc-8c3d519318c0.png)
+
