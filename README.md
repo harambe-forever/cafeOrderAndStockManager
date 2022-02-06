@@ -21,7 +21,7 @@ Order:
 
 ![siparis1](https://user-images.githubusercontent.com/71318378/148652386-1ffb2b34-a895-4135-9a5a-d57f422aa9d2.png)
 
-You can either order to table, or buy shit to takeaway. So you need to clearify your needs first.
+You can either order to table, or buy items to takeaway. So you need to clearify your needs first.
 Then, you can add items to your basket just by clicking on them. ie:
 
 ![siparis2](https://user-images.githubusercontent.com/71318378/148652411-856ae85a-2e1b-4fa5-beb8-25d7ea4e3042.png)
@@ -33,7 +33,7 @@ After you save your table, on the tables menu you can see that your table data h
 At this point you can add as much items to your table as you wish. But your payment is also increasing so be carefull with that lmao.
 After you're done eating, simply click on the table you want to pay and click on pay button to make payment.
 
-Or, you might as well just buy your shit and leave the restaurant. 
+Or, you might as well just buy your items and leave the restaurant. 
 In this case you need to select takeaway option:
 
 ![siparis3](https://user-images.githubusercontent.com/71318378/148652542-a31dfc0c-c5ec-4d30-bc34-91ffe60bd77b.png)
