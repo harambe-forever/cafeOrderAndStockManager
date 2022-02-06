@@ -38,6 +38,9 @@ In this case you need to select takeaway option:
 
 ![siparis3](https://user-images.githubusercontent.com/71318378/148652542-a31dfc0c-c5ec-4d30-bc34-91ffe60bd77b.png)
 
+It the quantity of your items get below 20, app automatically fills it to 100
+
+
 Inventory:
 If you need to refill your inventory, simply click on the items you want to buy from supplier, clearify your quantity,
 and select a shipment date for your orders:
@@ -50,6 +53,7 @@ specified date that you pick. If you order now, a random order ID will be create
 ![envanter2](https://user-images.githubusercontent.com/71318378/148652685-b39417fd-5dab-4bef-b2a7-cb9a0e6f514c.png)
 
 You can clearly see the increment in the quantity of your ordered items.
+After your items are delivered (date constraint) it is removed from the list
 
 Settings:
 
